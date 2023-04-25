@@ -5,7 +5,6 @@
 const puppeteer = require('puppeteer');
 const {join} = require('path');
 
-
 ; (async () => {
     const browser = await puppeteer.launch({
         executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
