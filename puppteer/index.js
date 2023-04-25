@@ -31,7 +31,7 @@ const {join} = require('path');
 
     await page.goto('https://juejin.cn/');       // 打开页面
 
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
 
     await page.screenshot({path: join(__dirname, "example.png")});
 
