@@ -7,7 +7,7 @@ const {join} = require('path');
 
 ; (async () => {
     const browser = await puppeteer.launch({
-        executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+        // executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
         headless: false,        // 开启界面
         args: [`--window-size=${1440},${1000}`], // new option
         defaultViewport: { width: 1440, height: 1000 },

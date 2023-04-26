@@ -31,6 +31,18 @@ const {join} = require('path');
 
     await page.goto('https://juejin.cn/');       // 打开页面
 
+
+    inputElement = await  page.$(".logo")
+
+    console.log(inputElement)
+    await  inputElement.screenshot({path: join(__dirname, "example1.png")})
+
+    await page.type('.search-input', 'World', {delay: 100});
+
+    await page.click('.seach-icon-container')
+
+    await page.waitForTimeout(1000);
+
     await page.waitForTimeout(1000);
 
     await page.screenshot({path: join(__dirname, "example.png")});
