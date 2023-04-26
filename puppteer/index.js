@@ -41,9 +41,10 @@ const {join} = require('path');
 
     await page.click('.seach-icon-container')
 
-    await page.waitForTimeout(1000);
-
-    await page.waitForTimeout(1000);
+    //判断页面加载完成
+    await page.waitForNavigation({
+        waitUntil:"networkidle0"
+    });
 
     await page.screenshot({path: join(__dirname, "example.png")});
 
