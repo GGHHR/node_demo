@@ -1,40 +1,27 @@
-const { app, BrowserWindow } = require('electron')
-const path = require('path')
-
-const createWindow = () => {
-    // 创建浏览窗口
-    const mainWindow = new BrowserWindow({
+let  app=require('electron').app;
+let  BrowserWindow=require('electron').BrowserWindow;
+// 创建窗口
+function createWindow() {
+    const win = new BrowserWindow({
         width: 800,
         height: 600,
         webPreferences: {
-            // preload: path.join(__dirname, 'preload.js')
+            nodeIntegration: true
         }
-    })
+    });
+    win.loadURL("http://localhost:5173/")
 
-    // 加载 index.html
-    // mainWindow.loadFile('index.html')
-    mainWindow.loadURL('http://localhost:5173')
-
-    // 打开开发工具
-    // mainWindow.webContents.openDevTools()
+    // 打开文件选择器
+    // dialog.showOpenDialog(win, {
+    //     properties: ['openFile']
+    // }).then(result => {
+    //     if (!result.canceled) {
+    //         const filePaths = result.filePaths;
+    //         console.log('Selected file paths:', filePaths);
+    //         // 进一步处理选中的文件路径
+    //     }
+    // });
 }
 
-// 这段程序将会在 Electron 结束初始化
-// 和创建浏览器窗口的时候调用
-// 部分 API 在 ready 事件触发后才能使用。
-app.whenReady().then(() => {
-    createWindow()
-
-    app.on('activate', () => {
-        // 在 macOS 系统内, 如果没有已开启的应用窗口
-        // 点击托盘图标时通常会重新创建一个新窗口
-        if (BrowserWindow.getAllWindows().length === 0) createWindow()
-    })
-})
-
-// 除了 macOS 外，当所有窗口都被关闭的时候退出程序。 因此, 通常
-// 对应用程序和它们的菜单栏来说应该时刻保持激活状态,
-// 直到用户使用 Cmd + Q 明确退出
-app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') app.quit()
-})
+// 应用程序准备就绪时创建窗口
+app.whenReady().then(createWindow);
