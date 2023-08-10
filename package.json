@@ -4,7 +4,8 @@
   "description": "2222",
   "main": "main/index.js",
   "scripts": {
-    "puppteer": "node puppteer/index.js"
+    "puppteer": "node puppteer/index.js",
+    "pkg":"pkg index.js -t node12-win-x64 --out-path=dist/"
   },
   "keywords": [],
   "author": "e Doe",
@@ -12,5 +13,8 @@
   "dependencies": {
     "express": "^4.18.2",
     "puppeteer": "^19.11.0"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
   }
 }
