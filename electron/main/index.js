@@ -1,5 +1,5 @@
-let  app=require('electron').app;
-let  BrowserWindow=require('electron').BrowserWindow;
+let {join}=require('path');
+let {BrowserWindow,app}=require('electron');
 // 创建窗口
 function createWindow() {
     const win = new BrowserWindow({
@@ -9,8 +9,9 @@ function createWindow() {
             nodeIntegration: true
         }
     });
-    win.loadURL("http://localhost:5173/")
-
+    // win.loadURL("http://localhost:5173/")
+    win.loadFile(join(__dirname,"../dist/index.html"))
+    win.webContents.openDevTools();
     // 打开文件选择器
     // dialog.showOpenDialog(win, {
     //     properties: ['openFile']

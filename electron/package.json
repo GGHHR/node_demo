@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "electron_start": "electron .",
-    "electron_build": "electron-packager  ./  myapp --win --out  ./outputs --overwrite  --ignore=.git  --ignore=.vscode  --ignore=node_modules  --ignore=public  --ignore=src"
+    "electron_build": "electron-packager . --win --out ./outputs --overwrite --ignore=.git --ignore=.vscode --ignore=node_modules --ignore=public --ignore=src"
   },
   "dependencies": {
     "axios": "^1.4.0",

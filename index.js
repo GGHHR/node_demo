@@ -1,1 +1,1 @@
-console.log(1213132);
+console.log(process.env)
