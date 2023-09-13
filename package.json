@@ -5,9 +5,8 @@
   "main": "main/index.js",
   "scripts": {
     "puppteer": "node puppteer/index.js",
-    "pkg": "pkg index.js -t node12-win-x64 --out-path=dist/"
+    "pkg": "pkg index.js -t node18-win-x64 --out-path=dist/"
   },
-  "keywords": [],
   "author": "e Doe",
   "license": "MIT",
   "dependencies": {
