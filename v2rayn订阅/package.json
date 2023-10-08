@@ -1,0 +1,17 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pkg": "pkg index.js -t node18-win-x64 --out-path=dist/ --exclude \"node_modules/puppeteer/.local-chromium/**/*\"\n"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pkg": "^5.8.1",
+    "ps-list": "^8.1.1",
+    "puppeteer": "^21.3.5",
+    "sqlite3": "^5.1.6"
+  }
+}

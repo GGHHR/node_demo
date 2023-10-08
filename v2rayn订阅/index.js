@@ -1,0 +1,168 @@
+const puppeteer = require('puppeteer');
+const sqlite3 = require('sqlite3').verbose();
+
+async function getRunningV2raynPath() {
+    try {
+        const { default: psList } = await import('ps-list');
+
+        const processes = await psList();
+
+        const v2raynProcess = processes.find(process => process.name.includes('v2rayN'));
+
+        if (v2raynProcess) {
+            console.log('v2rayn 正在运行，路径：', v2raynProcess.cmd);
+        } else {
+            console.log('v2rayn 未在运行');
+        }
+    } catch (error) {
+        console.log('查询过程中出现错误：', error.message);
+    }
+}
+
+getRunningV2raynPath();
+class SubGet {
+    async initialize(url, listEl, el, remarks, id) {
+        this.url = url;
+        this.listEl = listEl;
+        this.el = el;
+        this.remarks = remarks;
+        this.id = id;
+
+        this.browser = await puppeteer.launch({
+            headless: 'new',
+            executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+        });
+        await this.start();
+    }
+
+    async start() {
+        const page = await this.browser.newPage();
+        await page.goto(this.url);
+        await page.waitForSelector(this.listEl);
+        const content = await page.evaluate(selector => {
+            return document.querySelector(selector).href;
+        }, this.listEl);
+        await page.goto(content);
+        await page.waitForSelector(this.el);
+        const content1 = await page.evaluate(selector => {
+            return document.querySelector(selector).textContent;
+        }, this.el);
+
+        // 定义匹配URL的正则表达式模式
+        const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
+
+        // 查找匹配的链接
+        const matches = content1.match(urlPattern);
+
+        // 输出匹配的链接
+        for (const match of matches) {
+            let convertTarget = "";
+
+            if (match.endsWith("yaml")) {
+                convertTarget = "mixed";
+            }
+
+            console.log(`链接${this.remarks}：${match}`);
+
+            // 调用 UpSubItem.Up() 函数
+            await new UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
+
+            await this.browser.close();
+        }
+    }
+}
+class SubGet1 {
+    async initialize(url, el, remarks, id) {
+        this.url = url;
+        this.el = el;
+        this.remarks = remarks;
+        this.id = id;
+
+        this.browser = await puppeteer.launch({
+            headless: false,
+            executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+        });
+        this.start();
+    }
+
+    async start() {
+        const page = await this.browser.newPage();
+        await page.goto(this.url);
+        await page.waitForSelector(this.el);
+        const content1 = await page.evaluate(selector => {
+            return document.querySelector(selector).textContent;
+        }, this.el);
+
+        // 定义匹配URL的正则表达式模式
+        const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
+
+        // 查找匹配的链接
+        const matches = content1.match(urlPattern);
+
+        // 输出匹配的链接
+        for (const match of matches) {
+            let convertTarget = "";
+
+            if (match.endsWith("yaml")) {
+                convertTarget = "mixed";
+            }
+
+            console.log(`链接${this.remarks}：${match}`);
+
+            // 调用 UpSubItem.Up() 函数
+            await new UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
+
+            await this.browser.close();
+        }
+    }
+}
+
+class UpSubItem {
+    constructor(url, remarks, id, convertTarget) {
+        const outputValue = 'D:/APP/v2rayN-With-Core/guiConfigs/guiNDB.db'; // 替换为实际的输出路径
+        // 打开数据库连接
+        const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE, (err) => {
+            if (err) {
+                console.error(err.message);
+            } else {
+                // console.log(`Connected to the ${dbFilePath} database.`);
+            }
+        });
+
+        // 定义 SQL 语句以插入或替换 SubItem 表中的记录
+        const insertOrUpdateSql = `INSERT OR REPLACE INTO SubItem (remarks, url, id, convertTarget) VALUES (?, ?, ?, ?)`;
+
+        // 执行 SQL 语句
+        db.run(insertOrUpdateSql, [remarks, url, id, convertTarget], function(err) {
+            if (err) {
+                console.error(err.message);
+            } else {
+                // console.log(`Row(s) updated: ${this.changes}`);
+            }
+
+            // 关闭数据库连接
+            db.close((err) => {
+                if (err) {
+                    console.error(err.message);
+                } else {
+                    // console.log('Closed the database connection.');
+                }
+            });
+        });
+    }
+}
+
+async function main() {
+
+    // 进来是列表的那种
+    await new SubGet().initialize("https://nodefree.org/", ".item-title a", ".section p","a1","1");
+    await new SubGet().initialize("https://clashnode.com/", "[cp-post-title] a", ".post-content-content h2+p+p+p","a2","2");
+    await new SubGet().initialize("https://v2cross.com/", ".entry-title a", ".entry-content h5","a3","3");
+    await new SubGet().initialize("https://clashgithub.com/", "[itemprop=\"name headline\"] a", ".article-content p:nth-child(11)","a4","4");
+    await new SubGet().initialize("https://www.iyio.net/", ".column article:nth-child(4) a", "pre","a5","5");
+    await new SubGet().initialize("https://kkzui.com/", ".row  .url-card:last-child a", ".panel-body p:nth-child(7)","a6","6");
+    // 进来直接找链接
+    await new SubGet1().initialize("https://wanshanziwo.eu.org/", ".is-fullwidth tr:nth-child(3) td","b1","1000");
+}
+
+main();
