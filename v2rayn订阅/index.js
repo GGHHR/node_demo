@@ -3,6 +3,7 @@ const sqlite3 = require('sqlite3').verbose();
 const ps = require('ps-node');
 const path = require('path');
 
+
 function getRunningV2raynPath() {
     return new Promise((resolve, reject) => {
         ps.lookup({
@@ -133,7 +134,7 @@ class UpSubItem {
                 if (command) {
 
                     const outputValue = path.join(command,'guiConfigs/guiNDB.db'); // 替换为实际的输出路径
-                    console.log(outputValue)
+                    // console.log(outputValue)
                     // 打开数据库连接
                     const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE)
 

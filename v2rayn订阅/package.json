@@ -1,17 +1,16 @@
 {
-  "name": "y",
+  "name": "v2rayn订阅",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
-    "pkg": "pkg index.js -t node18-win-x64 --out-path=dist/ --exclude \"node_modules/puppeteer/.local-chromium/**/*\" --include \"node_modules/puppeteer/**/*\"",
-    "nexe": "nexe -i index.js -o dist/app.exe"
+    "pkg": "pkg . -t node18-win-x64 --out-path=dist/ "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "pkg": "^5.8.1",
-    "ps-list": "^8.1.1",
     "ps-node": "^0.1.6",
     "puppeteer": "^21.3.8",
     "sqlite3": "^5.1.6"
