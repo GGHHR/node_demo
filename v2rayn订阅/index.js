@@ -47,12 +47,12 @@ class SubGet {
     async start() {
         const page = await this.browser.newPage();
         await page.goto(this.url);
-        await page.waitForSelector(this.listEl);
+        await page.waitForSelector(this.listEl,{timeout:99999});
         const content = await page.evaluate(selector => {
             return document.querySelector(selector).href;
         }, this.listEl);
         await page.goto(content);
-        await page.waitForSelector(this.el);
+        await page.waitForSelector(this.el,{timeout:99999});
         const content1 = await page.evaluate(selector => {
             return document.querySelector(selector).textContent;
         }, this.el);
@@ -98,7 +98,7 @@ class SubGet1 {
     async start() {
         const page = await this.browser.newPage();
         await page.goto(this.url);
-        await page.waitForSelector(this.el);
+        await page.waitForSelector(this.el,{timeout:99999});
         const content1 = await page.evaluate(selector => {
             return document.querySelector(selector).textContent;
         }, this.el);
