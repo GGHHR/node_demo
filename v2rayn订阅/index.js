@@ -181,12 +181,12 @@ async function main() {
 
 
     // 进来是列表的那种
-    // await new SubGet().initialize("https://nodefree.org/", ".item-title a", ".section p", "a1", "1");
-    // await new SubGet().initialize("https://clashnode.com/", "[cp-post-title] a", ".post-content-content h2+p+p+p", "a2", "2");
-    // await new SubGet().initialize("https://v2cross.com/", ".entry-title a", ".entry-content h5", "a3", "3");
-    // await new SubGet().initialize("https://clashgithub.com/", "[itemprop=\"name headline\"] a", ".article-content p:nth-child(11)", "a4", "4");
-    // await new SubGet().initialize("https://kkzui.com/", ".row  .url-card:last-child a", ".panel-body p:nth-child(7)", "a6", "6");
-    // // 进来直接找链接
+    await new SubGet().initialize("https://nodefree.org/", ".item-title a", ".section p", "a1", "1");
+    await new SubGet().initialize("https://clashnode.com/", "[cp-post-title] a", ".post-content-content h2+p+p+p", "a2", "2");
+    await new SubGet().initialize("https://v2cross.com/", ".entry-title a", ".entry-content h5", "a3", "3");
+    await new SubGet().initialize("https://clashgithub.com/", "[itemprop=\"name headline\"] a", ".article-content p:nth-child(11)", "a4", "4");
+    await new SubGet().initialize("https://kkzui.com/", ".row  .url-card:last-child a", ".panel-body p:nth-child(7)", "a6", "6");
+    // 进来直接找链接
     await new SubGet1().initialize("https://wanshanziwo.eu.org/", ".is-fullwidth tr:nth-child(3) td", "b1", "1000");
 }
 
