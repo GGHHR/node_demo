@@ -38,7 +38,7 @@ class SubGet {
         this.id = id;
 
         this.browser = await puppeteer.launch({
-            headless: 'new',
+            headless: true,
             executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
         });
         await this.start();
@@ -48,14 +48,15 @@ class SubGet {
         const page = await this.browser.newPage();
         await page.goto(this.url);
         await page.waitForSelector(this.listEl,{timeout:99999});
-        const content = await page.evaluate(selector => {
-            return document.querySelector(selector).href;
-        }, this.listEl);
+
+        const content = await page.$eval(this.listEl, element => element.href);
+
         await page.goto(content);
+
         await page.waitForSelector(this.el,{timeout:99999});
-        const content1 = await page.evaluate(selector => {
-            return document.querySelector(selector).textContent;
-        }, this.el);
+
+
+        let content1 =  await page.$eval(this.el, element => element.textContent);
 
         // 定义匹配URL的正则表达式模式
         const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
@@ -64,7 +65,7 @@ class SubGet {
         const matches = content1.match(urlPattern);
 
         // 输出匹配的链接
-        for (const match of matches) {
+        for (const match of matches||[]) {
             let convertTarget = "";
 
             if (match.endsWith("yaml")) {
@@ -97,35 +98,39 @@ class SubGet1 {
 
     async start() {
         const page = await this.browser.newPage();
-        await page.goto(this.url);
-        await page.waitForSelector(this.el,{timeout:99999});
-        const content1 = await page.evaluate(selector => {
-            return document.querySelector(selector).textContent;
-        }, this.el);
+            await page.goto(this.url);
+            await page.waitForSelector(this.el,{timeout:99999});
 
-        // 定义匹配URL的正则表达式模式
-        const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
+            const content1= page.$eval(this.el, element => element.textContent);
 
-        // 查找匹配的链接
-        const matches = content1.match(urlPattern);
+            // 定义匹配URL的正则表达式模式
+            const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
 
-        // 输出匹配的链接
-        for (const match of matches) {
-            let convertTarget = "";
+            // 查找匹配的链接
+            const matches = content1.match(urlPattern);
 
-            if (match.endsWith("yaml")) {
-                convertTarget = "mixed";
+            // 输出匹配的链接
+            for (const match of matches) {
+                let convertTarget = "";
+
+                if (match.endsWith("yaml")) {
+                    convertTarget = "mixed";
+                }
+
+                console.log(`链接${this.remarks}：${match}`);
+
+                // 调用 UpSubItem.Up() 函数
+                await new UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
+
+                await this.browser.close();
             }
 
-            console.log(`链接${this.remarks}：${match}`);
-
-            // 调用 UpSubItem.Up() 函数
-            await new UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
-
-            await this.browser.close();
-        }
     }
 }
+
+
+
+
 
 class UpSubItem {
     constructor(url, remarks, id, convertTarget) {
@@ -180,7 +185,6 @@ async function main() {
     await new SubGet().initialize("https://clashnode.com/", "[cp-post-title] a", ".post-content-content h2+p+p+p", "a2", "2");
     await new SubGet().initialize("https://v2cross.com/", ".entry-title a", ".entry-content h5", "a3", "3");
     await new SubGet().initialize("https://clashgithub.com/", "[itemprop=\"name headline\"] a", ".article-content p:nth-child(11)", "a4", "4");
-    await new SubGet().initialize("https://www.iyio.net/", ".column article:nth-child(4) a", "pre", "a5", "5");
     await new SubGet().initialize("https://kkzui.com/", ".row  .url-card:last-child a", ".panel-body p:nth-child(7)", "a6", "6");
     // 进来直接找链接
     await new SubGet1().initialize("https://wanshanziwo.eu.org/", ".is-fullwidth tr:nth-child(3) td", "b1", "1000");
