@@ -8,9 +8,6 @@ dependencies:
   pkg:
     specifier: ^5.8.1
     version: 5.8.1
-  ps-list:
-    specifier: ^8.1.1
-    version: 8.1.1
   ps-node:
     specifier: ^0.1.6
     version: 0.1.6
@@ -1572,11 +1569,6 @@ packages:
 
   /proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
-    dev: false
-
-  /ps-list@8.1.1:
-    resolution: {integrity: sha512-OPS9kEJYVmiO48u/B9qneqhkMvgCxT+Tm28VCEJpheTpl8cJ0ffZRRNgS5mrQRTrX5yRTpaJ+hRDeefXYmmorQ==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
   /ps-node@0.1.6:
