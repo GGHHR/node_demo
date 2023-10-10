@@ -191,7 +191,7 @@ async function main() {
     await new SubGet().initialize("https://clashgithub.com/", "[itemprop=\"name headline\"] a", ".article-content p:nth-child(11)", "a4", "4");
     await new SubGet().initialize("https://kkzui.com/", ".row  .url-card:last-child a", ".panel-body p:nth-child(7)", "a5", "5");
     // 进来直接找链接
-    await new SubGet1().initialize("https://wanshanziwo.eu.org/", ".is-fullwidth tr:nth-child(3) td", "b1", "1000");
+    await new SubGet1().initialize("https://wanshanziwo.eu.org/", '.container section:nth-child(5)  .is-fullwidth tr:nth-child(2) td', "b1", "1000");
 }
 
 main();
