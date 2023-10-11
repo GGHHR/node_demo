@@ -101,8 +101,6 @@ class UpSubItem {
                     db.run(insertOrUpdateSql, [remarks, url, id, convertTarget], function (err) {
                         if (err) {
                             console.error(err.message);
-                        } else {
-                            // console.log(`Row(s) updated: ${this.changes}`);
                         }
 
                         // 关闭数据库连接
@@ -138,7 +136,7 @@ async function main() {
     await new SubGet().initialize("https://clashgithub.com/", "[itemprop=\"name headline\"] a", ".article-content p:nth-child(11)", "a4", "4");
     await new SubGet().initialize("https://kkzui.com/", ".row  .url-card:last-child a", ".panel-body p:nth-child(7)", "a5", "5");
     // 进来直接找链接
-    await new SubGet().initialize("https://wanshanziwo.eu.org/", null,'.container section:nth-child(5)  .is-fullwidth tr:nth-child(2) td', "b1", "1000");
+    await new SubGet().initialize("https://wanshanziwo.eu.org/", null,'.container section:nth-child(5)  .is-fullwidth tr:nth-child(2) td', "a6", "6");
 }
 
 main();
