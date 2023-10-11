@@ -49,13 +49,18 @@ class SubGet {
 
     async start() {
         const page = await this.browser.newPage();
-        await page.goto(this.url);
+
+        await page.goto(this.url,{timeout:99999}).catch(v=>{
+            console.log(v)
+        } ).finally(v=>{
+            console.log(v)
+        })
 
         let content;
         if (this.listEl){
             await page.waitForSelector(this.listEl,{timeout:99999});
             content = await page.$eval(this.listEl, element => element.href);
-            await page.goto(content);
+            await page.goto(content,{timeout:99999});
         }
         await page.waitForSelector(this.el,{timeout:99999});
         content =  await page.$eval(this.el, element => element.textContent);
@@ -126,9 +131,6 @@ class UpSubItem {
 }
 
 async function main() {
-
-
-
     // 进来是列表的那种
     await new SubGet().initialize("https://nodefree.org/", ".item-title a", ".section p", "a1", "1");
     await new SubGet().initialize("https://clashnode.com/", "[cp-post-title] a", ".post-content-content h2+p+p+p", "a2", "2");
