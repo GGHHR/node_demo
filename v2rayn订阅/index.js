@@ -51,21 +51,19 @@ class SubGet {
         const page = await this.browser.newPage();
         await page.goto(this.url);
         await page.waitForSelector(this.listEl,{timeout:99999});
+        let content = await page.$eval(this.listEl, element => element.href);
 
-        const content = await page.$eval(this.listEl, element => element.href);
-
-        await page.goto(content);
-
-        await page.waitForSelector(this.el,{timeout:99999});
-
-
-        let content1 =  await page.$eval(this.el, element => element.textContent);
+        if (!this.el){
+            await page.goto(content);
+            await page.waitForSelector(this.el,{timeout:99999});
+            content =  await page.$eval(this.el, element => element.textContent);
+        }
 
         // 定义匹配URL的正则表达式模式
         const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
 
         // 查找匹配的链接
-        const matches = content1.match(urlPattern);
+        const matches = content.match(urlPattern);
 
         // 输出匹配的链接
         for (const match of matches||[]) {
@@ -84,57 +82,6 @@ class SubGet {
         }
     }
 }
-
-class SubGet1 {
-    async initialize(url, el, remarks, id) {
-        this.url = url;
-        this.el = el;
-        this.remarks = remarks;
-        this.id = id;
-
-        this.browser = await puppeteer.launch({
-            headless: false,
-            slowMo: 250,
-            executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
-        });
-        this.start();
-    }
-
-    async start() {
-        const page = await this.browser.newPage();
-            await page.goto(this.url);
-            await page.waitForSelector(this.el,{timeout:99999});
-
-            const content1=await page.$eval(this.el, element => element.textContent);
-
-            // 定义匹配URL的正则表达式模式
-            const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
-
-            // 查找匹配的链接
-            const matches = content1.match(urlPattern);
-
-            // 输出匹配的链接
-            for (const match of matches) {
-                let convertTarget = "";
-
-                if (match.endsWith("yaml")) {
-                    convertTarget = "mixed";
-                }
-
-                console.log(`链接${this.remarks}：${match}`);
-
-                // 调用 UpSubItem.Up() 函数
-                await new UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
-
-                await this.browser.close();
-            }
-
-    }
-}
-
-
-
-
 
 class UpSubItem {
     constructor(url, remarks, id, convertTarget) {
@@ -191,7 +138,7 @@ async function main() {
     await new SubGet().initialize("https://clashgithub.com/", "[itemprop=\"name headline\"] a", ".article-content p:nth-child(11)", "a4", "4");
     await new SubGet().initialize("https://kkzui.com/", ".row  .url-card:last-child a", ".panel-body p:nth-child(7)", "a5", "5");
     // 进来直接找链接
-    await new SubGet1().initialize("https://wanshanziwo.eu.org/", '.container section:nth-child(5)  .is-fullwidth tr:nth-child(2) td', "b1", "1000");
+    await new SubGet().initialize("https://wanshanziwo.eu.org/", '.container section:nth-child(5)  .is-fullwidth tr:nth-child(2) td', null,"b1", "1000");
 }
 
 main();
