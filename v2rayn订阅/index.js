@@ -49,18 +49,16 @@ class SubGet {
 
     async start() {
         const page = await this.browser.newPage();
+        console.log('正在：' + this.url);
 
-        await page.goto(this.url,{timeout:99999}).catch(v=>{
-            console.log(v)
-        } ).finally(v=>{
-            console.log(v)
-        })
-
+        await page.goto(this.url,{timeout:99999});
         let content;
         if (this.listEl){
             await page.waitForSelector(this.listEl,{timeout:99999});
             content = await page.$eval(this.listEl, element => element.href);
             await page.goto(content,{timeout:99999});
+
+            console.log('正在：' + content);
         }
         await page.waitForSelector(this.el,{timeout:99999});
         content =  await page.$eval(this.el, element => element.textContent);
@@ -77,9 +75,7 @@ class SubGet {
             if (match.endsWith("yaml")) {
                 convertTarget = "mixed";
             }
-
             console.log(`链接${this.remarks}：${match}`);
-
             // 调用 UpSubItem.Up() 函数
             await new UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
 
