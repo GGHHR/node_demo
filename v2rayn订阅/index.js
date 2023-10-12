@@ -1,8 +1,8 @@
 const puppeteer = require('puppeteer');
 const sqlite3 = require('sqlite3').verbose();
 const ps = require('ps-node');
-const path = require('path');
-
+const fs = require("fs");
+const path = require("path");
 
 function getRunningV2raynPath() {
     return new Promise((resolve, reject) => {
@@ -30,10 +30,10 @@ function getRunningV2raynPath() {
 
 
 class SubGet {
-    async initialize(url, listEl, el, remarks, id) {
+    async initialize(url,sel, remarks, id) {
         this.url = url;
-        this.listEl = listEl;
-        this.el = el;
+        this.sel = sel[0];
+        this.el = sel[1];
         this.remarks = remarks;
         this.id = id;
 
@@ -51,17 +51,17 @@ class SubGet {
         const page = await this.browser.newPage();
         console.log('正在：' + this.url);
 
-        await page.goto(this.url,{timeout:99999});
+        await page.goto(this.url, {timeout: 99999});
         let content;
-        if (this.listEl){
-            await page.waitForSelector(this.listEl,{timeout:99999});
+        if (this.listEl) {
+            await page.waitForSelector(this.listEl, {timeout: 99999});
             content = await page.$eval(this.listEl, element => element.href);
-            await page.goto(content,{timeout:99999});
+            await page.goto(content, {timeout: 99999});
 
             console.log('正在：' + content);
         }
-        await page.waitForSelector(this.el,{timeout:99999});
-        content =  await page.$eval(this.el, element => element.textContent);
+        await page.waitForSelector(this.el, {timeout: 99999});
+        content = await page.$eval(this.el, element => element.textContent);
         // 定义匹配URL的正则表达式模式
         const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
 
@@ -69,7 +69,7 @@ class SubGet {
         const matches = content.match(urlPattern);
 
         // 输出匹配的链接
-        for (const match of matches||[]) {
+        for (const match of matches || []) {
             let convertTarget = "";
 
             if (match.endsWith("yaml")) {
@@ -86,11 +86,11 @@ class SubGet {
 
 class UpSubItem {
     constructor(url, remarks, id, convertTarget) {
-         getRunningV2raynPath()
+        getRunningV2raynPath()
             .then(command => {
                 if (command) {
 
-                    const outputValue = path.join(command,'guiConfigs/guiNDB.db'); // 替换为实际的输出路径
+                    const outputValue = path.join(command, 'guiConfigs/guiNDB.db'); // 替换为实际的输出路径
                     // console.log(outputValue)
                     // 打开数据库连接
                     const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE)
@@ -127,14 +127,18 @@ class UpSubItem {
 }
 
 async function main() {
-    // 进来是列表的那种
-    await new SubGet().initialize("https://nodefree.org/", ".item-title a", ".section p", "a1", "1");
-    await new SubGet().initialize("https://clashnode.com/", "[cp-post-title] a", ".post-content-content h2+p+p+p", "a2", "2");
-    await new SubGet().initialize("https://v2cross.com/", ".entry-title a", ".entry-content h5", "a3", "3");
-    await new SubGet().initialize("https://clashgithub.com/", "[itemprop=\"name headline\"] a", ".article-content p:nth-child(11)", "a4", "4");
-    await new SubGet().initialize("https://kkzui.com/", ".row  .url-card:last-child a", ".panel-body p:nth-child(7)", "a5", "5");
-    // 进来直接找链接
-    await new SubGet().initialize("https://wanshanziwo.eu.org/", null,'.container section:nth-child(5)  .is-fullwidth tr:nth-child(2) td', "a6", "6");
+
+    const filePath =await path.join(__dirname, "init.json");
+    let fileContent = await fs.readFileSync(filePath, "utf8");
+    let select= await JSON.parse(fileContent ).select
+
+     select.map( async (v,i)=>{
+         try {
+             await new SubGet().initialize(v.url, v.sel, "a"+ (i+1), i+1);
+         } catch (e) {
+             console.log('失败：'+v.url)
+         }
+    })
 }
 
 main();
