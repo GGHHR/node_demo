@@ -51,16 +51,16 @@ class SubGet {
         const page = await this.browser.newPage();
         console.log('正在：' + this.url);
 
-        await page.goto(this.url, {timeout: 99999});
+        await page.goto(this.url);
         let content;
         if (this.listEl) {
-            await page.waitForSelector(this.listEl, {timeout: 99999});
+            await page.waitForSelector(this.listEl);
             content = await page.$eval(this.listEl, element => element.href);
-            await page.goto(content, {timeout: 99999});
+            await page.goto(content);
 
             console.log('正在：' + content);
         }
-        await page.waitForSelector(this.el, {timeout: 99999});
+        await page.waitForSelector(this.el);
         content = await page.$eval(this.el, element => element.textContent);
         // 定义匹配URL的正则表达式模式
         const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
@@ -132,13 +132,16 @@ async function main() {
     let fileContent = await fs.readFileSync(filePath, "utf8");
     let select= await JSON.parse(fileContent ).select
 
-     select.map( async (v,i)=>{
-         try {
-             await new SubGet().initialize(v.url, v.sel, "a"+ (i+1), i+1);
-         } catch (e) {
-             console.log('失败：'+v.url)
-         }
-    })
+    await Promise.all(select.map(async (v, i) => {
+        try {
+            await new SubGet().initialize(v.url, v.sel, "a" + (i + 1), i + 1);
+        } catch (e) {
+            console.log('失败：' + v.url);
+        }
+    }));
+
+    // All asynchronous tasks have completed, so you can now exit the process.
+    process.exit(0);
 }
 
 main();
