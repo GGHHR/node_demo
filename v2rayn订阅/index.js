@@ -128,11 +128,12 @@ class UpSubItem {
 
 async function main() {
 
-    const filePath =await path.join(__dirname, "init.json");
-    let fileContent = await fs.readFileSync(filePath, "utf8");
-    let select= await JSON.parse(fileContent ).select
+    const scriptDir = path.dirname(__filename);
+    const initFilePath = path.join(scriptDir, 'init.json');
+    const select = JSON.parse(fs.readFileSync(initFilePath, 'utf8'));
 
-    await Promise.all(select.map(async (v, i) => {
+
+    await Promise.all(select.select.map(async (v, i) => {
         try {
             await new SubGet().initialize(v.url, v.sel, "a" + (i + 1), i + 1);
         } catch (e) {
