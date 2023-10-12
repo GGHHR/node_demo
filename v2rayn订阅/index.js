@@ -51,16 +51,15 @@ class SubGet {
         const page = await this.browser.newPage();
         console.log('正在：' + this.url);
 
-        await page.goto(this.url);
+        await page.goto(this.url,{timeout:99999});
         let content;
         if (this.listEl) {
-            await page.waitForSelector(this.listEl);
+            await page.waitForSelector(this.listEl,{timeout:99999});
             content = await page.$eval(this.listEl, element => element.href);
-            await page.goto(content);
-
+            await page.goto(content,{timeout:99999});
             console.log('正在：' + content);
         }
-        await page.waitForSelector(this.el);
+        await page.waitForSelector(this.el,{timeout:99999});
         content = await page.$eval(this.el, element => element.textContent);
         // 定义匹配URL的正则表达式模式
         const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
