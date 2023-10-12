@@ -128,9 +128,8 @@ class UpSubItem {
 
 async function main() {
 
-    const scriptDir = path.dirname(__filename);
-    const initFilePath = path.join(scriptDir, 'init.json');
-    const select = JSON.parse(fs.readFileSync(initFilePath, 'utf8'));
+
+    const select = JSON.parse(fs.readFileSync('./init.json', 'utf8'));
 
 
     await Promise.all(select.select.map(async (v, i) => {
