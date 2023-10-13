@@ -138,9 +138,7 @@ async function main() {
             console.log('失败：' + v.url);
         }
     }));
-
-    // All asynchronous tasks have completed, so you can now exit the process.
-    process.exit(0);
 }
 
 main();
+setInterval(main,7200_000)
