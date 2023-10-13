@@ -141,4 +141,3 @@ async function main() {
 }
 
 main();
-setInterval(main,3600_000)
