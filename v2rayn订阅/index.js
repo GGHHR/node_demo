@@ -127,9 +127,7 @@ class UpSubItem {
 
 async function main() {
 
-
     const select = JSON.parse(fs.readFileSync('./init.json', 'utf8'));
-
 
     await Promise.all(select.select.map(async (v, i) => {
         try {
@@ -138,6 +136,7 @@ async function main() {
             console.log('失败：' + v.url);
         }
     }));
+    await process.exit(0);
 }
 
 main();
