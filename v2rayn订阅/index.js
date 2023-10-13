@@ -141,4 +141,4 @@ async function main() {
 }
 
 main();
-setInterval(main,1800_000)
+setInterval(main,3600_000)
