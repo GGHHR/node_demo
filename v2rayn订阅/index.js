@@ -95,10 +95,10 @@ class UpSubItem {
                     const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE)
 
                     // 定义 SQL 语句以插入或替换 SubItem 表中的记录
-                    const insertOrUpdateSql = `INSERT OR REPLACE INTO SubItem (remarks, url, id, convertTarget) VALUES (?, ?, ?, ?)`;
+                    const insertOrUpdateSql = `INSERT OR REPLACE INTO SubItem (remarks, url, id, convertTarget,sort) VALUES (?, ?, ?, ?, ?)`;
 
                     // 执行 SQL 语句
-                    db.run(insertOrUpdateSql, [remarks, url, id, convertTarget], function (err) {
+                    db.run(insertOrUpdateSql, [remarks, url, id, convertTarget,id], function (err) {
                         if (err) {
                             console.error(err.message);
                         }
