@@ -32,7 +32,7 @@ function getRunningV2raynPath() {
 class SubGet {
     async initialize(url,sel, remarks, id) {
         this.url = url;
-        this.sel = sel[0];
+        this.listEl = sel[0];
         this.el = sel[1];
         this.remarks = remarks;
         this.id = id;
