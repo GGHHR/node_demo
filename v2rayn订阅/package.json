@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "p-queue": "^7.4.1",
     "pkg": "^5.8.1",
     "ps-node": "^0.1.6",
     "puppeteer": "^21.3.8",
