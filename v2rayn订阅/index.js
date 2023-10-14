@@ -4,6 +4,8 @@ const ps = require('ps-node');
 const fs = require("fs");
 const path = require("path");
 
+process.setMaxListeners(0);
+
 function getRunningV2raynPath() {
     return new Promise((resolve, reject) => {
         ps.lookup({

@@ -24,5 +24,14 @@
         },{
             "url": "https://www.butnono.com/daily-v2ray-airport.html",
             "sel": [null,"a[rel=\"noreferrer noopener sponsored nofollow\"]"]
+        },{
+            "url": "https://wenode.cc/",
+            "sel": [".post_def_right a",".wznrys p:nth-child(20)"]
+        },{
+            "url": "https://ihaoke.vip/mianfeijiedian-vmess/#jiedianliebiao",
+            "sel": [null,"pre+pre code"]
+        },{
+            "url": "https://www.iyio.net/search/label/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9",
+            "sel": [".clamp","pre"]
         }
-]}
+    ]}
