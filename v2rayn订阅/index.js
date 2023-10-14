@@ -86,7 +86,6 @@ class UpSubItem {
         getRunningV2raynPath()
             .then(command => {
                 if (command) {
-
                     const outputValue = path.join(command, 'guiConfigs/guiNDB.db'); // 替换为实际的输出路径
                     // console.log(outputValue)
                     // 打开数据库连接
