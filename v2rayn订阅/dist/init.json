@@ -76,6 +76,13 @@
                 ".clamp",
                 "pre"
             ]
+        },
+        {
+            "url": "https://freeclash.org/",
+            "sel": [
+                ".post-item-main a",
+                ".post-content-content p:nth-child(20)"
+            ]
         }
     ]
 }

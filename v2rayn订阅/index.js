@@ -32,6 +32,9 @@ function getRunningV2raynPath() {
 
 
 class SubGet {
+    constructor(browser) {
+        this.browser = browser;
+    }
     async initialize(url,sel, remarks, id) {
         this.url = url;
         this.listEl = sel[0];
@@ -39,13 +42,6 @@ class SubGet {
         this.remarks = remarks;
         this.id = id;
 
-        this.browser = await puppeteer.launch({
-            headless: "new",
-            slowMo: 250,
-            // defaultViewport: { width: 200, height: 200 },
-            // args: ['--window-size=0,0'],
-            executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
-        });
         await this.start();
     }
 
@@ -80,7 +76,7 @@ class SubGet {
             // 调用 UpSubItem.Up() 函数
             await new UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
 
-            await this.browser.close();
+            await this.page.close()
         }
     }
 }
@@ -131,13 +127,21 @@ async function main() {
 
     const select = JSON.parse(fs.readFileSync('./init.json', 'utf8'));
 
+    let browser =   await puppeteer.launch({
+        headless: "new",
+        slowMo: 250,
+        // defaultViewport: { width: 200, height: 200 },
+        // args: ['--window-size=0,0'],
+        executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+    });
     await Promise.all(select.select.map(async (v, i) => {
         try {
-            await new SubGet().initialize(v.url, v.sel, "a" + (i + 1), i + 1);
+            await new SubGet(browser).initialize(v.url, v.sel, "a" + (i + 1), i + 1);
         } catch (e) {
             console.log('失败：' + v.url);
         }
     }));
+    await browser.close()
     await process.exit(0);
 }
 
