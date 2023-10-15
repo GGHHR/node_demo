@@ -83,6 +83,13 @@
                 ".post-item-main a",
                 ".post-content-content p:nth-child(20)"
             ]
+        },
+        {
+            "url": "https://www.cfmem.com/",
+            "sel": [
+                ".entry-title a",
+                ".cm-comment div span"
+            ]
         }
     ]
 }

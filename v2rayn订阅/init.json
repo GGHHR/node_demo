@@ -39,7 +39,7 @@
             "url": "https://wanshanziwo.eu.org/",
             "sel": [
                 null,
-                ".container section:nth-child(5)  .is-fullwidth tr:nth-child(2) td"
+                ".is-fullwidth tr:nth-child(3) td"
             ]
         },
         {
@@ -75,6 +75,20 @@
             "sel": [
                 ".clamp",
                 "pre"
+            ]
+        },
+        {
+            "url": "https://freeclash.org/",
+            "sel": [
+                ".post-item-main a",
+                ".post-content-content p:nth-child(20)"
+            ]
+        },
+        {
+            "url": "https://www.cfmem.com/",
+            "sel": [
+                ".entry-title a",
+                ".cm-comment div span"
             ]
         }
     ]
