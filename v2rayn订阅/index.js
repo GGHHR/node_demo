@@ -68,8 +68,7 @@ class SubGet {
         // 输出匹配的链接
         for (const match of matches || []) {
             let convertTarget = "";
-
-            if (match.endsWith("yaml")||match.endsWith("yml")) {
+            if (match.endsWith("yaml"||"yml")) {
                 convertTarget = "mixed";
             }
             console.log(`链接${this.remarks}：${match}`);
