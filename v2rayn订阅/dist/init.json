@@ -39,7 +39,7 @@
             "url": "https://wanshanziwo.eu.org/",
             "sel": [
                 null,
-                ".container section:nth-child(5)  .is-fullwidth tr:nth-child(2) td"
+                ".is-fullwidth tr:nth-child(3) td"
             ]
         },
         {
