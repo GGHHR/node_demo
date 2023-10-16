@@ -12,7 +12,7 @@ const {terser} = require('rollup-plugin-terser');
 
 
 export default defineConfig({
-
+    base: './',
     plugins: [
         vue(),
         Pages()

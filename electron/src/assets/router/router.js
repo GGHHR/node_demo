@@ -1,9 +1,9 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import {createRouter, createWebHashHistory} from 'vue-router'
 import routes from '~pages'
 // 路由参数配置
 const router = createRouter({
     // 使用hash(createWebHashHistory)模式，(createWebHistory是HTML5历史模式，支持SEO)
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes:[
         { path: '/', component: () =>import("@/pages/props/father.vue") },
 
