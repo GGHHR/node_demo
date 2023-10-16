@@ -90,6 +90,20 @@
                 ".entry-title a",
                 ".cm-comment div span"
             ]
+        },
+        {
+            "url": "https://weoknow.com/index.php/article/383.html",
+            "sel": [
+                null,
+                ".article-content p:nth-child(17)"
+            ]
+        },
+        {
+            "url": "https://weoknow.com/index.php/article/383.html",
+            "sel": [
+                null,
+                ".article-content p:nth-child(40)"
+            ]
         }
     ]
 }
