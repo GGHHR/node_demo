@@ -9,7 +9,34 @@
     "build": "vite build",
     "preview": "vite preview",
     "electron_start": "electron .",
-    "electron_build": "electron-packager . --win --out ./outputs --overwrite --asar   --ignore=.git --ignore=.vscode --ignore=node_modules --ignore=public --ignore=src"
+    "electron-packager": "electron-packager . --win --out ./outputs --overwrite --asar   --ignore=.git --ignore=.vscode --ignore=node_modules --ignore=public --ignore=src",
+    "electron_builder": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.example.app",
+    "productName": "electron",
+    "directories": {
+      "output": "outputs"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "!node_modules",
+      "!src",
+      "!public"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "runAfterFinish": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "deleteAppDataOnUninstall": true,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "dependencies": {
     "axios": "^1.5.0",
@@ -20,6 +47,7 @@
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
+    "electron-builder": "^24.6.4",
     "@electron/asar": "^3.2.4",
     "@vitejs/plugin-vue": "^4.3.4",
     "electron": "^25.8.0",
