@@ -1,7 +1,20 @@
 const electron= require('electron');
 let { app, BrowserWindow ,globalShortcut,Menu,MenuItem,ipcMain}=electron;
-
 let path = require('path')
+
+
+const { NsisUpdater  } = require("electron-updater")
+const options = {
+    requestHeaders: {
+
+    },
+    provider: 'generic',
+    url: 'http://localhost:3000/'
+}
+
+const autoUpdater = new NsisUpdater(options)
+autoUpdater.checkForUpdatesAndNotify()
+
 
 const createWindow = () => {
     const win = new BrowserWindow({
@@ -59,3 +72,4 @@ ipcMain.on('message-from-renderer', (event, message) => {
 app.on('will-quit', () => {
 
 })
+

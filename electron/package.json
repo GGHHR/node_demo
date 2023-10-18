@@ -1,63 +1,69 @@
 {
-  "name": "electron",
-  "private": true,
-  "version": "0.0.0",
-  "main": "electron/index.js",
-  "asar": true,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "electron_start": "electron .",
-    "electron-packager": "electron-packager . --win --out ./outputs --overwrite --asar   --ignore=.git --ignore=.vscode --ignore=node_modules --ignore=public --ignore=src",
-    "electron_builder": "electron-builder --win --x64"
-  },
-  "build": {
-    "appId": "com.example.app",
-    "productName": "electron",
-    "directories": {
-      "output": "outputs"
+    "name": "electron",
+    "private": true,
+    "version": "0.0.1",
+    "main": "electron/index.js",
+    "asar": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "electron_start": "electron .",
+        "electron_builder": "electron-builder --win --x64"
     },
-    "files": [
-      "dist/**/*",
-      "electron/**/*",
-      "!node_modules",
-      "!src",
-      "!public"
-    ],
-    "win": {
-      "target": "nsis",
-      "icon": "build/icon.ico"
+    "build": {
+        "appId": "com.example.app",
+        "productName": "electron",
+        "directories": {
+            "output": "outputs"
+        },
+        "files": [
+            "dist/**/*",
+            "electron/**/*",
+            "!node_modules",
+            "!src",
+            "!public"
+        ],
+        "win": {
+            "publish": [
+                {
+                    "provider": "generic",
+                    "url": "http://localhost:3000/"
+                }
+            ],
+            "target": "nsis",
+            "icon": "build/icon.ico"
+        },
+        "nsis": {
+            "oneClick": false,
+            "runAfterFinish": false,
+            "perMachine": true,
+            "allowElevation": true,
+            "deleteAppDataOnUninstall": true,
+            "allowToChangeInstallationDirectory": true
+        }
+
     },
-    "nsis": {
-      "oneClick": false,
-      "runAfterFinish": false,
-      "perMachine": true,
-      "allowElevation": true,
-      "deleteAppDataOnUninstall": true,
-      "allowToChangeInstallationDirectory": true
+    "dependencies": {
+        "axios": "^1.5.0",
+        "element-plus": "^2.3.12",
+        "pinia": "^2.1.6",
+        "pinia-plugin-persistedstate": "^3.2.0",
+        "vue": "^3.3.4",
+        "vue-router": "^4.2.4"
+    },
+    "devDependencies": {
+        "@electron/asar": "^3.2.4",
+        "@vitejs/plugin-vue": "^4.3.4",
+        "electron": "^25.8.0",
+        "electron-builder": "^24.6.4",
+        "rollup-plugin-terser": "^7.0.2",
+        "sass": "^1.66.1",
+        "sass-loader": "^13.3.2",
+        "unplugin-auto-import": "^0.16.6",
+        "unplugin-vue-components": "^0.25.2",
+        "vite": "^4.4.9",
+        "vite-plugin-pages": "^0.31.0",
+        "vite-plugin-style-import": "^2.0.0"
     }
-  },
-  "dependencies": {
-    "axios": "^1.5.0",
-    "element-plus": "^2.3.12",
-    "pinia": "^2.1.6",
-    "pinia-plugin-persistedstate": "^3.2.0",
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.4"
-  },
-  "devDependencies": {
-    "electron-builder": "^24.6.4",
-    "@electron/asar": "^3.2.4",
-    "@vitejs/plugin-vue": "^4.3.4",
-    "electron": "^25.8.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.66.1",
-    "sass-loader": "^13.3.2",
-    "unplugin-auto-import": "^0.16.6",
-    "unplugin-vue-components": "^0.25.2",
-    "vite": "^4.4.9",
-    "vite-plugin-pages": "^0.31.0",
-    "vite-plugin-style-import": "^2.0.0"
-  }
 }
