@@ -29,13 +29,6 @@
             ]
         },
         {
-            "url": "https://kkzui.com/",
-            "sel": [
-                ".row  .url-card:last-child a",
-                ".panel-body p:nth-child(7)"
-            ]
-        },
-        {
             "url": "https://wanshanziwo.eu.org/",
             "sel": [
                 null,
