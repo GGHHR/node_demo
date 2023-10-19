@@ -1,19 +1,9 @@
 const electron= require('electron');
-let { app, BrowserWindow ,globalShortcut,Menu,MenuItem,ipcMain}=electron;
+let { app, dialog , BrowserWindow ,globalShortcut,Menu,MenuItem,ipcMain}=electron;
 let path = require('path')
+const { autoUpdater } = require('electron-updater');
 
 
-const { NsisUpdater  } = require("electron-updater")
-const options = {
-    requestHeaders: {
-
-    },
-    provider: 'generic',
-    url: 'http://localhost:3000/'
-}
-
-const autoUpdater = new NsisUpdater(options)
-autoUpdater.checkForUpdatesAndNotify()
 
 
 const createWindow = () => {
@@ -61,7 +51,7 @@ const createWindow = () => {
 
 }
 app.whenReady().then(() => {
-    createWindow()
+    createWindow();
 })
 ipcMain.on('message-from-renderer', (event, message) => {
 
@@ -72,4 +62,44 @@ ipcMain.on('message-from-renderer', (event, message) => {
 app.on('will-quit', () => {
 
 })
+function checkUpdate(){
+/*    Object.defineProperty(app, 'isPackaged', {
+        get() {
+            return true;
+        }
+    });*/
+    autoUpdater.autoDownload = false;
 
+    autoUpdater.setFeedURL({
+        provider: 'generic',
+        url: 'http://127.0.0.1:3000/'
+    })
+
+    //监听'error'事件
+    autoUpdater.on('error', (err) => {
+        console.log(err)
+    })
+    autoUpdater.checkForUpdates();
+    autoUpdater.on('update-available', () => {
+        dialog.showMessageBox({
+            type: 'info',
+            title: '应用更新',
+            message: '发现新版本，是否更新？',
+            buttons: ['否', '是']
+        }).then((buttonIndex) => {
+            if (buttonIndex.response === 1) {
+                // 用户选择是，执行安装新版本的逻辑
+                autoUpdater.quitAndInstall()
+            } else {
+                // 用户选择否，不执行安装新版本的逻辑
+                console.log('用户选择不更新');
+                autoUpdater.quit();
+            }
+        });
+    });
+}
+
+app.on('ready', () => {
+    //每次启动程序，就检查更新
+    checkUpdate()
+})
