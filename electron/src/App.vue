@@ -5,7 +5,7 @@ import { ref} from 'vue'
 let msg=ref(1)
 
 
-
+console.log(electron.ipcRenderer)
 
 
 function msgFn(data) {
