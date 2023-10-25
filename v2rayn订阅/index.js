@@ -124,7 +124,6 @@ class UpSubItem {
 async function main() {
 
     const select = JSON.parse(fs.readFileSync('./init.json', 'utf8'));
-
     let browser =   await puppeteer.launch({
         headless: "new",
         slowMo: 250,
