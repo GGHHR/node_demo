@@ -22,13 +22,6 @@
             ]
         },
         {
-            "url": "https://clashgithub.com/",
-            "sel": [
-                "[itemprop=\"name headline\"] a",
-                ".article-content p:nth-child(11)"
-            ]
-        },
-        {
             "url": "https://wanshanziwo.eu.org/",
             "sel": [
                 null,
@@ -50,13 +43,6 @@
             ]
         },
         {
-            "url": "https://wenode.cc/",
-            "sel": [
-                ".post_def_right a",
-                ".wznrys p:nth-child(20)"
-            ]
-        },
-        {
             "url": "https://ihaoke.vip/mianfeijiedian-vmess/#jiedianliebiao",
             "sel": [
                 null,
@@ -68,13 +54,6 @@
             "sel": [
                 ".clamp",
                 "pre"
-            ]
-        },
-        {
-            "url": "https://freeclash.org/",
-            "sel": [
-                ".post-item-main a",
-                ".post-content-content p:nth-child(20)"
             ]
         },
         {
