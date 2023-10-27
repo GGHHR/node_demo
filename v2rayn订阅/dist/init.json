@@ -6,6 +6,76 @@
                 ".item-title a",
                 ".section p"
             ]
+        },
+        {
+            "url": "https://clashnode.com/",
+            "sel": [
+                "[cp-post-title] a",
+                ".post-content-content h2+p+p+p"
+            ]
+        },
+        {
+            "url": "https://v2cross.com/",
+            "sel": [
+                ".entry-title a",
+                ".entry-content h5"
+            ]
+        },
+        {
+            "url": "https://wanshanziwo.eu.org/",
+            "sel": [
+                null,
+                ".is-fullwidth tr:nth-child(3) td"
+            ]
+        },
+        {
+            "url": "https://github.com/Pawdroid/Free-servers",
+            "sel": [
+                null,
+                "h5 [rel=\"nofollow\"]"
+            ]
+        },
+        {
+            "url": "https://www.butnono.com/daily-v2ray-airport.html",
+            "sel": [
+                null,
+                "a[rel=\"noreferrer noopener sponsored nofollow\"]"
+            ]
+        },
+        {
+            "url": "https://ihaoke.vip/mianfeijiedian-vmess/#jiedianliebiao",
+            "sel": [
+                null,
+                "pre+pre code"
+            ]
+        },
+        {
+            "url": "https://www.iyio.net/search/label/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9",
+            "sel": [
+                ".clamp",
+                "pre"
+            ]
+        },
+        {
+            "url": "https://www.cfmem.com/",
+            "sel": [
+                ".entry-title a",
+                ".cm-comment div span"
+            ]
+        },
+        {
+            "url": "https://weoknow.com/index.php/article/383.html",
+            "sel": [
+                null,
+                ".article-content p:nth-child(17)"
+            ]
+        },
+        {
+            "url": "https://weoknow.com/index.php/article/383.html",
+            "sel": [
+                null,
+                ".article-content p:nth-child(40)"
+            ]
         }
     ]
 }
