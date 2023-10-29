@@ -63,20 +63,18 @@ class SubGet {
         const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
 
         // 查找匹配的链接
-        const matches = content.match(urlPattern);
+        const match = content.match(urlPattern)[0];
 
         // 输出匹配的链接
-        for (const match of matches || []) {
-            let convertTarget = "";
-            if (match.endsWith("yaml"||"yml")) {
-                convertTarget = "mixed";
-            }
-            console.log(`链接${this.remarks}：${match}`);
-            // 调用 UpSubItem.Up() 函数
-            await new UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
-
-
+        let convertTarget = "";
+        if (match.endsWith("yaml"||"yml")) {
+            convertTarget = "mixed";
         }
+        console.log(`链接${this.remarks}：${match}`);
+        // 调用 UpSubItem.Up() 函数
+        await new UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
+
+
         await page.close();
     }
 }
@@ -128,7 +126,6 @@ async function main() {
 
     let browser =   await puppeteer.launch({
         headless: "new",
-        headless: false,
         slowMo: 250,
         executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
     });
