@@ -75,8 +75,9 @@ class SubGet {
             // 调用 UpSubItem.Up() 函数
             await new UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
 
-            await this.page.close()
+
         }
+        await page.close();
     }
 }
 
@@ -127,6 +128,7 @@ async function main() {
 
     let browser =   await puppeteer.launch({
         headless: "new",
+        headless: false,
         slowMo: 250,
         executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
     });
