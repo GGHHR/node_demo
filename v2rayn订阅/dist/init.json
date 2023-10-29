@@ -78,7 +78,7 @@
             ]
         },
         {
-            "url": "https://api.v1.mk/sub?target=mixed&url=https://pastebin.com/raw/GxR5pELe&insert=false&config=https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-mini-gfw.ini&emoji=true&list=false&udp=false&tfo=false&expand=true&scv=false&fdn=false",
+            "url":  "https://api.v1.mk/sub?target=clash&url=https://pastebin.com/raw/GxR5pELe&insert=false&config=https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-mini-gfw.ini&emoji=true&list=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true&yaml",
             "sel": [
                 null,
                 "pre"
