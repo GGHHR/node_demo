@@ -78,10 +78,38 @@
             ]
         },
         {
-            "url": "https://api.v1.mk/sub?target=mixed&url=https://pastebin.com/raw/GxR5pELe&insert=false&config=https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-mini-gfw.ini&emoji=true&list=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&yaml",
+            "url":"https://github.com/openRunner/clash-freenode" ,
             "sel": [
                 null,
-                "pre"
+                "article p:nth-child(8) a"
+            ]
+        },
+        {
+            "url":"https://github.com/ZywChannel/free" ,
+            "sel": [
+                null,
+                "article p:nth-child(5) a"
+            ]
+        },
+        {
+            "url":"https://github.com/Pawdroid/Free-servers" ,
+            "sel": [
+                null,
+                "article h5 a+a"
+            ]
+        },
+        {
+            "url":"https://github.com/tbbatbb/Proxy" ,
+            "sel": [
+                null,
+                "article ul+p+ul li code"
+            ]
+        },
+        {
+            "url":"https://github.com/anaer/Sub" ,
+            "sel": [
+                null,
+                "article code"
             ]
         }
     ]
