@@ -78,13 +78,6 @@
             ]
         },
         {
-            "url":"https://github.com/Pawdroid/Free-servers" ,
-            "sel": [
-                null,
-                "article h5 a+a"
-            ]
-        },
-        {
             "url":"https://github.com/tbbatbb/Proxy" ,
             "sel": [
                 null,
