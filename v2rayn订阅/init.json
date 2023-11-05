@@ -83,6 +83,13 @@
                 null,
                 "article code"
             ]
+        },
+        {
+            "url":"https://v2rayu.org/v2rayu-node/" ,
+            "sel": [
+                null,
+                ".wp-block-preformatted"
+            ]
         }
     ]
 }
