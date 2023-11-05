@@ -64,20 +64,6 @@
             ]
         },
         {
-            "url": "https://weoknow.com/index.php/article/383.html",
-            "sel": [
-                null,
-                ".article-content p:nth-child(17)"
-            ]
-        },
-        {
-            "url": "https://weoknow.com/index.php/article/383.html",
-            "sel": [
-                null,
-                ".article-content p:nth-child(40)"
-            ]
-        },
-        {
             "url":"https://github.com/openRunner/clash-freenode" ,
             "sel": [
                 null,
