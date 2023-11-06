@@ -83,6 +83,13 @@
                 null,
                 "article code"
             ]
+        },
+        {
+            "url":"https://www.mibei77.com/search/label/jiedian" ,
+            "sel": [
+                ".entry-title a",
+                ".post-body p:nth-child(9)"
+            ]
         }
     ]
 }
