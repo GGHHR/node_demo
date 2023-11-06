@@ -132,8 +132,12 @@ async function main() {
     await Promise.all(select.select.map(async (v, i) => {
         try {
             await new SubGet(browser).initialize(v.url, v.sel, "a" + (i + 1), i + 1);
+            if(i==select.select.length-1){
+                await cleanupDatabase(i+1);
+            }
         } catch (e) {
             console.log(`${i + 1}失败：`+ v.url);
+
         }
     }));
     await browser.close()
@@ -141,3 +145,40 @@ async function main() {
 }
 
 main();
+
+const cleanupDatabase = async (num) => {
+    try {
+        const command = await getRunningV2raynPath();
+        console.log('Command:', command);
+        if (command) {
+            const outputValue = path.join(command, 'guiConfigs/guiNDB.db');
+            console.log('Output value:', outputValue);
+            const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE);
+
+            const deleteSql = `DELETE FROM SubItem WHERE sort > ${num}`;
+            console.log('Delete SQL:', deleteSql);
+
+            db.exec(deleteSql, function (err) {
+                console.log('Executing delete operation...');
+                if (err) {
+                    console.error('Error deleting records:', err.message);
+                } else {
+                    console.log('Records with sort >', num, 'deleted successfully.');
+                }
+            });
+
+            db.close((err) => {
+                if (err) {
+                    console.error('Error closing the database connection:', err.message);
+                } else {
+                    console.log('Closed the database connection.');
+                }
+            });
+        } else {
+            console.log('v2rayn is not running.');
+        }
+    } catch (error) {
+        console.error('Cleanup operation failed:', error);
+    }
+};
+

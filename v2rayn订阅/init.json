@@ -85,10 +85,10 @@
             ]
         },
         {
-            "url":"https://v2rayu.org/v2rayu-node/" ,
+            "url":"https://www.mibei77.com/search/label/jiedian" ,
             "sel": [
-                null,
-                ".wp-block-preformatted"
+                ".entry-title a",
+                ".post-body p:nth-child(9)"
             ]
         }
     ]
