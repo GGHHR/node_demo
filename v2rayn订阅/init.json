@@ -99,7 +99,7 @@
             ]
         },
         {
-            "url":"https://kkzui.com/jd" ,
+            "url":"https://www.crazygeeky.com/" ,
             "sel": [
                 ".post-item-list:nth-child(2) .a-link",
                 ".puock-text p:nth-child(25)"
