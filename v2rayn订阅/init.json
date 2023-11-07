@@ -90,6 +90,13 @@
                 ".entry-title a",
                 ".post-body p:nth-child(9)"
             ]
+        },
+        {
+            "url":"https://kkzui.com/jd" ,
+            "sel": [
+                ".list-body a",
+                ".panel-body p:nth-child(21) strong"
+            ]
         }
     ]
 }
