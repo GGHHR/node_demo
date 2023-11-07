@@ -29,6 +29,20 @@
             ]
         },
         {
+            "url": "https://wanshanziwo.eu.org/",
+            "sel": [
+                null,
+                "section:nth-child(5) tr td"
+            ]
+        },
+        {
+            "url": "https://wanshanziwo.eu.org/",
+            "sel": [
+                null,
+                "section:nth-child(5) tr:nth-child(3) td"
+            ]
+        },
+        {
             "url": "https://www.butnono.com/daily-v2ray-airport.html",
             "sel": [
                 null,
@@ -57,38 +71,52 @@
             ]
         },
         {
-            "url":"https://github.com/openRunner/clash-freenode" ,
+            "url": "https://github.com/openRunner/clash-freenode",
             "sel": [
                 null,
                 "article p:nth-child(8) a"
             ]
         },
         {
-            "url":"https://github.com/ZywChannel/free" ,
+            "url": "https://github.com/ZywChannel/free",
             "sel": [
                 null,
                 "article p:nth-child(5) a"
             ]
         },
         {
-            "url":"https://github.com/tbbatbb/Proxy" ,
+            "url": "https://github.com/tbbatbb/Proxy",
             "sel": [
                 null,
                 "article ul+p+ul li code"
             ]
         },
         {
-            "url":"https://github.com/anaer/Sub" ,
+            "url": "https://github.com/anaer/Sub",
             "sel": [
                 null,
                 "article code"
             ]
         },
         {
-            "url":"https://www.mibei77.com/search/label/jiedian" ,
+            "url": "https://www.mibei77.com/search/label/jiedian",
             "sel": [
                 ".entry-title a",
                 ".post-body p:nth-child(9)"
+            ]
+        },
+        {
+            "url": "https://kkzui.com/jd",
+            "sel": [
+                ".list-body a",
+                ".panel-body p:nth-child(21) strong"
+            ]
+        },
+        {
+            "url": "https://www.crazygeeky.com/",
+            "sel": [
+                ".post-item-list:nth-child(2) .a-link",
+                ".puock-text p:nth-child(25)"
             ]
         }
     ]
