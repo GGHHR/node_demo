@@ -97,6 +97,13 @@
                 ".list-body a",
                 ".panel-body p:nth-child(21) strong"
             ]
+        },
+        {
+            "url":"https://kkzui.com/jd" ,
+            "sel": [
+                ".post-item-list:nth-child(2) .a-link",
+                ".puock-text p:nth-child(25)"
+            ]
         }
     ]
 }
