@@ -152,14 +152,10 @@ const cleanupDatabase = async (num) => {
         console.log('Command:', command);
         if (command) {
             const outputValue = path.join(command, 'guiConfigs/guiNDB.db');
-            console.log('Output value:', outputValue);
             const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE);
-
             const deleteSql = `DELETE FROM SubItem WHERE sort > ${num}`;
             console.log('Delete SQL:', deleteSql);
-
             db.exec(deleteSql, function (err) {
-                console.log('Executing delete operation...');
                 if (err) {
                     console.error('Error deleting records:', err.message);
                 } else {
