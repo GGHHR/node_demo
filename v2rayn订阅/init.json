@@ -43,13 +43,6 @@
             ]
         },
         {
-            "url": "https://wanshanziwo.eu.org/",
-            "sel": [
-                null,
-                "section:nth-child(5) tr:nth-child(5) td"
-            ]
-        },
-        {
             "url": "https://www.butnono.com/daily-v2ray-airport.html",
             "sel": [
                 null,
