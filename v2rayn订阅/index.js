@@ -131,7 +131,7 @@ async function main() {
     });
     await Promise.all(select.select.map(async (v, i) => {
         try {
-            await new SubGet(browser).initialize(v.url, v.sel, "a" + (i + 1), i + 1);
+            await new SubGet(browser).initialize(v.url, v.sel, i + 1, i + 1);
             if(i==select.select.length-1){
                 await cleanupDatabase(i+1);
             }
