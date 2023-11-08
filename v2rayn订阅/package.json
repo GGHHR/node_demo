@@ -12,7 +12,7 @@
   "dependencies": {
     "pkg": "^5.8.1",
     "ps-node": "^0.1.6",
-    "puppeteer": "^21.4.1",
+    "puppeteer": "^21.5.0",
     "sqlite3": "^5.1.6"
   }
 }

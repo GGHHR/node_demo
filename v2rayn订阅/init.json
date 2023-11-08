@@ -99,6 +99,48 @@
             ]
         },
         {
+            "url": "https://github.com/ermaozi/get_subscribe",
+            "sel": [
+                null,
+                "article [dir=\"auto\"]:nth-child(5) li:nth-child(2) code"
+            ]
+        },
+        {
+            "url": "https://github.com/ZywChannel/free",
+            "sel": [
+                null,
+                "article [dir=\"auto\"]:nth-child(5) a"
+            ]
+        },
+        {
+            "url": "https://github.com/Pawdroid/Free-servers",
+            "sel": [
+                null,
+                "h5 a[rel=\"nofollow\"]"
+            ]
+        },
+        {
+            "url": "https://github.com/ripaojiedian/freenode",
+            "sel": [
+                null,
+                "article [dir=\"auto\"]:nth-child(9) a"
+            ]
+        },
+        {
+            "url": "https://github.com/freenodes/freenodes",
+            "sel": [
+                null,
+                "article [dir=\"auto\"]:nth-child(14) li a"
+            ]
+        },
+        {
+            "url": "https://github.com/freenodes/freenodes",
+            "sel": [
+                null,
+                "article [dir=\"auto\"]:nth-child(14) li:nth-child(2) a"
+            ]
+        },
+        {
             "url": "https://www.mibei77.com/search/label/jiedian",
             "sel": [
                 ".entry-title a",
