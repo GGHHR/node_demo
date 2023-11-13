@@ -71,13 +71,6 @@
             ]
         },
         {
-            "url": "https://github.com/openRunner/clash-freenode",
-            "sel": [
-                null,
-                "article p:nth-child(8) a"
-            ]
-        },
-        {
             "url": "https://github.com/ZywChannel/free",
             "sel": [
                 null,
