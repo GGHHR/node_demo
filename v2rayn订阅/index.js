@@ -130,16 +130,20 @@ async function main() {
         executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
     });
     await Promise.all(select.select.map(async (v, i) => {
+        v.id=i+1;
         try {
             await new SubGet(browser).initialize(v.url, v.sel, i + 1, i + 1);
-            if(i==select.select.length-1){
+            if(i+1==select.select.length){
                 await cleanupDatabase(i+1);
             }
+            v.update=true;
         } catch (e) {
+            v.update=false;
             console.log(`${i + 1}失败：`+ v.url);
 
         }
     }));
+    fs.writeFileSync('./init.json',JSON.stringify(select),'utf-8');
     await browser.close()
     await process.exit(0);
 }
