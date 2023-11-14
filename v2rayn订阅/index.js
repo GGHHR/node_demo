@@ -135,6 +135,9 @@ async function main() {
             await new SubGet(browser).initialize(v.url, v.sel, i + 1, i + 1);
             if(i+1==select.select.length){
                 await cleanupDatabase(i+1);
+                await fs.writeFileSync('./init.json',JSON.stringify(select),'utf-8');
+                await browser.close()
+                await process.exit(0);
             }
             v.update=true;
         } catch (e) {
@@ -143,9 +146,7 @@ async function main() {
 
         }
     }));
-    fs.writeFileSync('./init.json',JSON.stringify(select),'utf-8');
-    await browser.close()
-    await process.exit(0);
+
 }
 
 main();
