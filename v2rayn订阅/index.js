@@ -47,6 +47,7 @@ class SubGet {
 
     async start() {
         const page = await this.browser.newPage();
+
         console.log('正在：' + this.url);
 
         await page.goto(this.url,{timeout:99999});
@@ -85,7 +86,7 @@ class UpSubItem {
             .then(command => {
                 if (command) {
                     const outputValue = path.join(command, 'guiConfigs/guiNDB.db'); // 替换为实际的输出路径
-                    // console.log(outputValue)
+
                     // 打开数据库连接
                     const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE)
 
@@ -103,7 +104,7 @@ class UpSubItem {
                             if (err) {
                                 console.error(err.message);
                             } else {
-                                // console.log('Closed the database connection.');
+                                console.log('Closed the database connection.');
                             }
                         });
                     });
@@ -129,6 +130,7 @@ async function main() {
         slowMo: 250,
         executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
     });
+
     await Promise.all(select.select.map(async (v, i) => {
         v.id=i+1;
         try {
