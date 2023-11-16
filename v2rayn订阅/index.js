@@ -50,15 +50,15 @@ class SubGet {
 
         console.log('正在：' + this.url);
 
-        await page.goto(this.url,{timeout:99999});
+        await page.goto(this.url,{timeout:10000});
         let content;
         if (this.listEl) {
-            await page.waitForSelector(this.listEl,{timeout:99999});
+            await page.waitForSelector(this.listEl,{timeout:10000});
             content = await page.$eval(this.listEl, element => element.href);
-            await page.goto(content,{timeout:99999});
+            await page.goto(content,{timeout:10000});
             console.log('正在：' + content);
         }
-        await page.waitForSelector(this.el,{timeout:99999});
+        await page.waitForSelector(this.el,{timeout:10000});
         content = await page.$eval(this.el, element => element.textContent);
         // 定义匹配URL的正则表达式模式
         const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
