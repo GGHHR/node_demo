@@ -47,17 +47,18 @@ class SubGet {
 
     async start() {
         const page = await this.browser.newPage();
+
         console.log('正在：' + this.url);
 
-        await page.goto(this.url,{timeout:99999});
+        await page.goto(this.url,{timeout:10000});
         let content;
         if (this.listEl) {
-            await page.waitForSelector(this.listEl,{timeout:99999});
+            await page.waitForSelector(this.listEl,{timeout:10000});
             content = await page.$eval(this.listEl, element => element.href);
-            await page.goto(content,{timeout:99999});
+            await page.goto(content,{timeout:10000});
             console.log('正在：' + content);
         }
-        await page.waitForSelector(this.el,{timeout:99999});
+        await page.waitForSelector(this.el,{timeout:10000});
         content = await page.$eval(this.el, element => element.textContent);
         // 定义匹配URL的正则表达式模式
         const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
@@ -85,7 +86,7 @@ class UpSubItem {
             .then(command => {
                 if (command) {
                     const outputValue = path.join(command, 'guiConfigs/guiNDB.db'); // 替换为实际的输出路径
-                    // console.log(outputValue)
+
                     // 打开数据库连接
                     const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE)
 
@@ -102,8 +103,6 @@ class UpSubItem {
                         db.close((err) => {
                             if (err) {
                                 console.error(err.message);
-                            } else {
-                                // console.log('Closed the database connection.');
                             }
                         });
                     });
@@ -129,16 +128,11 @@ async function main() {
         slowMo: 250,
         executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
     });
+
     await Promise.all(select.select.map(async (v, i) => {
         v.id=i+1;
         try {
             await new SubGet(browser).initialize(v.url, v.sel, i + 1, i + 1);
-            if(i+1==select.select.length){
-                await cleanupDatabase(i+1);
-                await fs.writeFileSync('./init.json',JSON.stringify(select),'utf-8');
-                await browser.close()
-                await process.exit(0);
-            }
             v.update=true;
         } catch (e) {
             v.update=false;
@@ -146,6 +140,11 @@ async function main() {
 
         }
     }));
+
+    await cleanupDatabase(select.select.length);
+    await fs.writeFileSync('./init.json',JSON.stringify(select),'utf-8');
+    await browser.close()
+    await process.exit(0);
 
 }
 
