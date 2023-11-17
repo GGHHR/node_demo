@@ -28,33 +28,6 @@
             "update": true
         },
         {
-            "url": "https://wanshanziwo.eu.org/",
-            "sel": [
-                null,
-                ".is-fullwidth tr:nth-child(3) td"
-            ],
-            "id": 4,
-            "update": false
-        },
-        {
-            "url": "https://wanshanziwo.eu.org/",
-            "sel": [
-                null,
-                "section:nth-child(5) tr td"
-            ],
-            "id": 5,
-            "update": false
-        },
-        {
-            "url": "https://wanshanziwo.eu.org/",
-            "sel": [
-                null,
-                "section:nth-child(5) tr:nth-child(3) td"
-            ],
-            "id": 6,
-            "update": false
-        },
-        {
             "url": "https://www.butnono.com/daily-v2ray-airport.html",
             "sel": [
                 null,
