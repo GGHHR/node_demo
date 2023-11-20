@@ -33,7 +33,7 @@
                 null,
                 "a[rel=\"noreferrer noopener sponsored nofollow\"]"
             ],
-            "id": 7,
+            "id": 4,
             "update": true
         },
         {
@@ -42,7 +42,7 @@
                 ".clamp",
                 "pre"
             ],
-            "id": 9,
+            "id": 5,
             "update": true
         },
         {
@@ -51,7 +51,7 @@
                 ".entry-title a",
                 ".cm-comment div span span"
             ],
-            "id": 10,
+            "id": 6,
             "update": true
         },
         {
@@ -60,7 +60,7 @@
                 null,
                 "article p:nth-child(5) a"
             ],
-            "id": 11,
+            "id": 7,
             "update": true
         },
         {
@@ -69,7 +69,7 @@
                 null,
                 "article code"
             ],
-            "id": 13,
+            "id": 8,
             "update": true
         },
         {
@@ -78,7 +78,7 @@
                 null,
                 "article [dir=\"auto\"]:nth-child(5) li:nth-child(2) code"
             ],
-            "id": 14,
+            "id": 9,
             "update": true
         },
         {
@@ -87,7 +87,7 @@
                 null,
                 "h5 a[rel=\"nofollow\"]"
             ],
-            "id": 16,
+            "id": 10,
             "update": true
         },
         {
@@ -96,7 +96,7 @@
                 null,
                 "article [dir=\"auto\"]:nth-child(9) a"
             ],
-            "id": 17,
+            "id": 11,
             "update": true
         },
         {
@@ -105,7 +105,7 @@
                 null,
                 "article [dir=\"auto\"]:nth-child(14) li:nth-child(2) a"
             ],
-            "id": 19,
+            "id": 12,
             "update": true
         },
         {
@@ -114,7 +114,7 @@
                 ".entry-title a",
                 ".post-body p:nth-child(9)"
             ],
-            "id": 20,
+            "id": 13,
             "update": true
         },
         {
@@ -123,7 +123,7 @@
                 ".list-body a",
                 ".panel-body p:nth-child(21) strong"
             ],
-            "id": 21,
+            "id": 14,
             "update": true
         },
         {
@@ -132,8 +132,17 @@
                 ".post-item-list:nth-child(2) .a-link",
                 ".puock-text p:nth-child(25)"
             ],
-            "id": 22,
+            "id": 15,
             "update": false
+        },
+        {
+            "url": "https://www.vpntizi.com/free/",
+            "sel": [
+                null,
+                ".wp-block-preformatted"
+            ],
+            "id": 16,
+            "update": true
         }
     ]
 }
