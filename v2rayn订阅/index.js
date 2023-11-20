@@ -60,6 +60,7 @@ class SubGet {
         }
         await page.waitForSelector(this.el,{timeout:99999});
         content = await page.$eval(this.el, element => element.textContent);
+
         // 定义匹配URL的正则表达式模式
         const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
 
