@@ -161,6 +161,15 @@
             ],
             "id": 17,
             "update": true
+        },
+        {
+            "url": "https://github.com/free18/v2ray",
+            "sel": [
+                null,
+                "article p:nth-child(14) a"
+            ],
+            "id": 17,
+            "update": true
         }
     ]
 }
