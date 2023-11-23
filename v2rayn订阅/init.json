@@ -152,6 +152,15 @@
             ],
             "id": 17,
             "update": true
+        },
+        {
+            "url": "https://github.com/vxiaov/free_proxy_ss",
+            "sel": [
+                null,
+                "article ul a"
+            ],
+            "id": 17,
+            "update": true
         }
     ]
 }
