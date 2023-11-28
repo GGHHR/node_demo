@@ -25,7 +25,8 @@
                 ".entry-content h5"
             ],
             "id": 3,
-            "update": true
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://www.butnono.com/daily-v2ray-airport.html",
@@ -107,7 +108,7 @@
             ],
             "id": 12,
             "update": false,
-            "shibai": 2
+            "shibai": 3
         },
         {
             "url": "https://www.mibei77.com/search/label/jiedian",
@@ -135,7 +136,7 @@
             ],
             "id": 15,
             "update": false,
-            "shibai": 2
+            "shibai": 3
         },
         {
             "url": "https://freenode.openrunner.net/",
