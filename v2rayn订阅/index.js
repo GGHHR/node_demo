@@ -139,35 +139,36 @@ async function main() {
 }
 
 main();
+
 const cleanupDatabase = async (num) => {
     try {
         const command = await getRunningV2raynPath();
-        console.log('Command:', command);
+        console.log('命令:', command);
         if (command) {
             const outputValue = path.join(command, 'guiConfigs/guiNDB.db');
             const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE);
             const deleteSql = `DELETE FROM SubItem WHERE sort > ${num}`;
-            console.log('Delete SQL:', deleteSql);
+            console.log('删除 SQL:', deleteSql);
             db.exec(deleteSql, function (err) {
                 if (err) {
-                    console.error('Error deleting records:', err.message);
+                    console.error('删除记录时出错:', err.message);
                 } else {
-                    console.log('Records with sort >', num, 'deleted successfully.');
+                    console.log('成功删除排序大于', num, '的记录。');
                 }
             });
 
             db.close((err) => {
                 if (err) {
-                    console.error('Error closing the database connection:', err.message);
+                    console.error('关闭数据库连接时出错:', err.message);
                 } else {
-                    console.log('Closed the database connection.');
+                    console.log('已关闭数据库连接。');
                 }
             });
         } else {
-            console.log('v2rayn is not running.');
+            console.log('v2rayn 未在运行。');
         }
     } catch (error) {
-        console.error('Cleanup operation failed:', error);
+        console.error('清理操作失败:', error);
     }
 };
 
