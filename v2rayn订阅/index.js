@@ -128,9 +128,9 @@ async function main() {
             v.update=false;
             v.shibai=v.shibai?v.shibai+1:1;
             console.log(`${i + 1}失败：`+ v.url);
-
         }
     }));
+    select.select = select.select.filter(v => v.shibai > 100);
 
     await cleanupDatabase(select.select.length);
     await fs.writeFileSync('./init.json',JSON.stringify(select),'utf-8');
