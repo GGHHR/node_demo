@@ -4,7 +4,6 @@ const ps = require('ps-node');
 const fs = require("fs");
 const path = require("path");
 
-process.setMaxListeners(0);
 
 function getRunningV2raynPath() {
     return new Promise((resolve, reject) => {
@@ -74,51 +73,41 @@ class SubGet {
         }
         console.log(`链接${this.remarks}：${match}`);
         // 调用 UpSubItem.Up() 函数
-        await new UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
+        await  UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
 
 
         await page.close();
     }
 }
 
-class UpSubItem {
-    constructor(url, remarks, id, convertTarget) {
-        getRunningV2raynPath()
-            .then(command => {
-                if (command) {
-                    const outputValue = path.join(command, 'guiConfigs/guiNDB.db'); // 替换为实际的输出路径
+    async function UpSubItem(url, remarks, id, convertTarget) {
+        try {
+            const command = await getRunningV2raynPath();
+            if (command) {
+                const outputValue = path.join(command, 'guiConfigs/guiNDB.db');
+                const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE);
+                const insertOrUpdateSql = `INSERT OR REPLACE INTO SubItem (remarks, url, id, convertTarget,sort) VALUES (?, ?, ?, ?, ?)`;
 
-                    // 打开数据库连接
-                    const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE)
-
-                    // 定义 SQL 语句以插入或替换 SubItem 表中的记录
-                    const insertOrUpdateSql = `INSERT OR REPLACE INTO SubItem (remarks, url, id, convertTarget,sort) VALUES (?, ?, ?, ?, ?)`;
-
-                    // 执行 SQL 语句
-                    db.run(insertOrUpdateSql, [remarks, url, id, convertTarget,id], function (err) {
+                db.run(insertOrUpdateSql, [remarks, url, id, convertTarget, id], function (err) {
+                    if (err) {
+                        console.error(err.message);
+                    }
+                    db.close((err) => {
                         if (err) {
                             console.error(err.message);
                         }
-
-                        // 关闭数据库连接
-                        db.close((err) => {
-                            if (err) {
-                                console.error(err.message);
-                            }
-                        });
                     });
-                } else {
-                    console.log('v2rayn 未在运行');
-                }
-                return command;
-            })
-            .catch(err => {
-                console.log('获取路径时出现错误：', err);
-            });
+                });
+            } else {
+                console.log('v2rayn 未在运行');
+            }
 
-
+            return command;
+        } catch (error) {
+            console.error('处理路径时出现错误：', error);
+        }
     }
-}
+
 
 async function main() {
 
@@ -150,7 +139,6 @@ async function main() {
 }
 
 main();
-
 const cleanupDatabase = async (num) => {
     try {
         const command = await getRunningV2raynPath();
