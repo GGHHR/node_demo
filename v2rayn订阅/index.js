@@ -110,14 +110,26 @@ class SubGet {
 
 
 async function main() {
-
-    const select = JSON.parse(fs.readFileSync('./init.json', 'utf8'));
+    let select  = JSON.parse(fs.readFileSync('./init.json', 'utf8'));
 
     let browser =   await puppeteer.launch({
         headless: "new",
         slowMo: 250,
         executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
     });
+
+    try {
+        const page = await browser.newPage();
+        let  url='https://raw.githubusercontent.com/GGHHR/node_demo/master/v2rayn%E8%AE%A2%E9%98%85/init.json';
+        await page.goto(url,{timeout:99999});
+        await page.waitForSelector('pre',{timeout:99999});
+        let  content = await page.$eval('pre', element => element.textContent);
+
+        content=JSON.parse(content);
+        select=content;
+        await page.close();
+    }catch (e){}
+
 
     await Promise.all(select.select.map(async (v, i) => {
         v.id=i+1;

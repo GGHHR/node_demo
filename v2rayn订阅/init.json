@@ -7,7 +7,7 @@
                 ".section p"
             ],
             "id": 1,
-            "update": false,
+            "update": true,
             "shibai": 1
         },
         {
@@ -36,7 +36,8 @@
                 "a[rel=\"noreferrer noopener sponsored nofollow\"]"
             ],
             "id": 4,
-            "update": true
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://www.iyio.net/search/label/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9",
@@ -53,7 +54,7 @@
                 null,
                 "article p:nth-child(5) a"
             ],
-            "id": 7,
+            "id": 6,
             "update": true
         },
         {
@@ -62,7 +63,7 @@
                 null,
                 "article code"
             ],
-            "id": 8,
+            "id": 7,
             "update": true
         },
         {
@@ -71,7 +72,7 @@
                 null,
                 "article [dir=\"auto\"]:nth-child(5) li:nth-child(2) code"
             ],
-            "id": 9,
+            "id": 8,
             "update": true
         },
         {
@@ -80,7 +81,7 @@
                 null,
                 "h5 a[rel=\"nofollow\"]"
             ],
-            "id": 10,
+            "id": 9,
             "update": true
         },
         {
@@ -89,7 +90,7 @@
                 null,
                 "article [dir=\"auto\"]:nth-child(9) a"
             ],
-            "id": 11,
+            "id": 10,
             "update": true
         },
         {
@@ -98,9 +99,9 @@
                 null,
                 "article [dir=\"auto\"]:nth-child(14) li:nth-child(2) a"
             ],
-            "id": 12,
+            "id": 11,
             "update": false,
-            "shibai": 4
+            "shibai": 5
         },
         {
             "url": "https://www.mibei77.com/search/label/jiedian",
@@ -108,7 +109,7 @@
                 ".entry-title a",
                 ".post-body p:nth-child(9)"
             ],
-            "id": 13,
+            "id": 12,
             "update": true
         },
         {
@@ -117,7 +118,7 @@
                 ".list-body a",
                 ".panel-body p:nth-child(21) strong"
             ],
-            "id": 14,
+            "id": 13,
             "update": true
         },
         {
@@ -126,9 +127,9 @@
                 ".post-item-list:nth-child(2) .a-link",
                 ".puock-text p:nth-child(25)"
             ],
-            "id": 15,
+            "id": 14,
             "update": false,
-            "shibai": 4
+            "shibai": 5
         },
         {
             "url": "https://www.vpntizi.com/free/",
@@ -136,16 +137,7 @@
                 null,
                 ".wp-block-preformatted"
             ],
-            "id": 17,
-            "update": true
-        },
-        {
-            "url": "https://github.com/vxiaov/free_proxy_ss",
-            "sel": [
-                null,
-                "article ul a"
-            ],
-            "id": 18,
+            "id": 15,
             "update": true
         },
         {
@@ -154,7 +146,7 @@
                 null,
                 "article p:nth-child(14) a"
             ],
-            "id": 19,
+            "id": 17,
             "update": true
         }
     ]
