@@ -132,7 +132,7 @@ async function main() {
         await page.close();
         console.log('请求成功')
     }catch (e){
-        console.log('请求失败;用本地的json文件')
+        console.log('请求失败，用本地的json文件')
     }
 
 
