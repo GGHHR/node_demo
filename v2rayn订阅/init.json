@@ -37,7 +37,7 @@
             ],
             "id": 4,
             "update": false,
-            "shibai": 1
+            "shibai": 2
         },
         {
             "url": "https://www.iyio.net/search/label/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9",
@@ -94,16 +94,6 @@
             "update": true
         },
         {
-            "url": "https://github.com/freenodes/freenodes",
-            "sel": [
-                null,
-                "article [dir=\"auto\"]:nth-child(14) li:nth-child(2) a"
-            ],
-            "id": 11,
-            "update": false,
-            "shibai": 5
-        },
-        {
             "url": "https://www.mibei77.com/search/label/jiedian",
             "sel": [
                 ".entry-title a",
@@ -129,7 +119,7 @@
             ],
             "id": 14,
             "update": false,
-            "shibai": 5
+            "shibai": 6
         },
         {
             "url": "https://www.vpntizi.com/free/",
@@ -146,7 +136,7 @@
                 null,
                 "article p:nth-child(14) a"
             ],
-            "id": 17,
+            "id": 16,
             "update": true
         }
     ]
