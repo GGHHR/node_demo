@@ -110,7 +110,7 @@ class SubGet {
 
 
 async function main() {
-    let select  = JSON.parse(fs.readFileSync('./init.json', 'utf8'));
+    let select ;
 
     let browser =   await puppeteer.launch({
         headless: "new",
@@ -122,16 +122,16 @@ async function main() {
         console.log('请求远程json中')
         const page = await browser.newPage();
         let  url='https://raw.githubusercontent.com/GGHHR/node_demo/master/v2rayn%E8%AE%A2%E9%98%85/init.json';
-
         await page.goto(url,{timeout:99999});
         await page.waitForSelector('pre',{timeout:99999});
         let  content = await page.$eval('pre', element => element.textContent);
-
         content=JSON.parse(content);
         select=content;
         await page.close();
         console.log('请求成功')
     }catch (e){
+
+        select  = JSON.parse(fs.readFileSync('./init.json', 'utf8'));
         console.log('请求失败，用本地的json文件')
     }
 
