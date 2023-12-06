@@ -8,9 +8,6 @@ import Components from 'unplugin-vue-components/vite'
 
 import Pages from 'vite-plugin-pages'
 
-const {terser} = require('rollup-plugin-terser');
-
-
 export default defineConfig({
     base: './',
     plugins: [
@@ -27,11 +24,6 @@ export default defineConfig({
         },
         rollupOptions: {
             plugins: [
-                terser({
-                    format: {
-                        comments: false,
-                    },
-                }),
                 AutoImport({
                     resolvers: [ElementPlusResolver()],
                 }),

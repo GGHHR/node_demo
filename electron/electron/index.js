@@ -1,17 +1,23 @@
-const electron= require('electron');
-let { app, dialog , BrowserWindow ,globalShortcut,Menu,MenuItem,ipcMain}=electron;
+const electron = require('electron');
+let {desktopCapturer ,app, BrowserWindow, globalShortcut, Menu, MenuItem, ipcMain, autoUpdater, dialog} = electron;
+
+const Store = require('electron-store');
+
+const store = new Store();
+
 let path = require('path')
-const { autoUpdater } = require('electron-updater');
-
-
 
 
 const createWindow = () => {
     const win = new BrowserWindow({
-        width: 1200,
-        height: 800,
+        width: 1920,
+        height: 1080,
         frame: false,
         webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: true,
+            enableRemoteModule: true,
+            worldSafeExecuteJavaScript: true,
             preload: path.join(__dirname, 'preload.js')
         }
     })
@@ -22,9 +28,13 @@ const createWindow = () => {
     electron.Menu.setApplicationMenu(null)
     // win.webContents.openDevTools();
 
-    const indexPath = path.join(  'dist', 'index.html');
-    // win.loadFile(indexPath)
-    win.loadURL('http://localhost:5173/')
+    win.once('ready-to-show', () => {
+        win.show(); // 当窗口准备好显示时，显示窗口
+    });
+
+    const indexPath = path.join('dist', 'index.html');
+    win.loadFile(indexPath)
+    // win.loadURL('http://localhost:5173/#/')
 
     const menu = new Menu()
     menu.append(new MenuItem({
@@ -38,7 +48,7 @@ const createWindow = () => {
                 if (!win.webContents.isDevToolsOpened()) {
                     // 打开开发者工具
                     win.webContents.openDevTools();
-                }else{
+                } else {
                     // 关闭开发者工具
                     win.webContents.closeDevTools();
                 }
@@ -49,57 +59,55 @@ const createWindow = () => {
 
     Menu.setApplicationMenu(menu)
 
+
+
+    ipcMain.on('savevideo', async (event, data) => {
+        console.log(data)
+        desktopCapturer.getSources({ types: ['screen'],thumbnailSize: { width: 1920, height: 1080 } }).then(async sources => {
+            for (const source of sources) {
+                console.log( source.name)
+                console.log( win.getTitle())
+                win.webContents.send('SET_SOURCE', source.id)
+            }
+        })
+
+    });
+
+
+
+    /*最小化 */
+    ipcMain.handle('min', () => {
+        win.minimize()
+    });
+    /*关闭 */
+    ipcMain.handle('close', () => {
+        win.close()
+    });
+    /*获取记住的帐号密码 */
+    ipcMain.handle('getStoreData', () => {
+        return store.get('userData');
+    });
+
+    // 监听渲染进程请求来保存数据
+    ipcMain.on('saveData', (event, data) => {
+        store.set('userData', data);
+    });
+
+
 }
 app.whenReady().then(() => {
     createWindow();
+    update();
 })
-ipcMain.on('message-from-renderer', (event, message) => {
 
-    console.log('Received message from renderer:', message);
 
-    event.reply('message-to-renderer', 'Hello from main process!');
-});
+
+
 app.on('will-quit', () => {
 
 })
-function checkUpdate(){
-/*    Object.defineProperty(app, 'isPackaged', {
-        get() {
-            return true;
-        }
-    });*/
-    autoUpdater.autoDownload = false;
 
-    autoUpdater.setFeedURL({
-        provider: 'generic',
-        url: 'http://127.0.0.1:3000/'
-    })
+function update() {
 
-    //监听'error'事件
-    autoUpdater.on('error', (err) => {
-        console.log(err)
-    })
-    autoUpdater.checkForUpdates();
-    autoUpdater.on('update-available', () => {
-        dialog.showMessageBox({
-            type: 'info',
-            title: '应用更新',
-            message: '发现新版本，是否更新？',
-            buttons: ['否', '是']
-        }).then((buttonIndex) => {
-            if (buttonIndex.response === 1) {
-                // 用户选择是，执行安装新版本的逻辑
-                autoUpdater.quitAndInstall()
-            } else {
-                // 用户选择否，不执行安装新版本的逻辑
-                console.log('用户选择不更新');
-                autoUpdater.quit();
-            }
-        });
-    });
+
 }
-
-app.on('ready', () => {
-    //每次启动程序，就检查更新
-    checkUpdate()
-})

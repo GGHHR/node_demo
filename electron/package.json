@@ -13,20 +13,18 @@
     },
     "build": {
         "appId": "com.example.app",
-        "productName": "electron",
+        "productName": "光纤",
         "directories": {
             "output": "outputs"
         },
         "files": [
-
+            "dist/**/*",
+            "electron/**/*",
+            "node_modules/electron-store/**/*",
+            "!src",
+            "!public"
         ],
         "win": {
-            "publish": [
-                {
-                    "provider": "generic",
-                    "url": ""
-                }
-            ],
             "target": "nsis",
             "icon": "build/icon.ico"
         },
@@ -40,26 +38,26 @@
         }
     },
     "dependencies": {
-        "axios": "^1.5.1",
+        "electron-store": "^7.0.0",
+        "axios": "^1.6.2",
         "electron-log": "^4.4.8",
-        "electron-updater": "^6.1.4",
-        "element-plus": "^2.4.1",
+        "electron-updater": "^6.1.7",
+        "element-plus": "^2.4.3",
         "pinia": "^2.1.7",
         "pinia-plugin-persistedstate": "^3.2.0",
-        "vue": "^3.3.4",
+        "vue": "^3.3.10",
         "vue-router": "^4.2.5"
     },
     "devDependencies": {
-        "@electron/asar": "^3.2.7",
-        "@vitejs/plugin-vue": "^4.4.0",
-        "electron": "^25.9.1",
-        "electron-builder": "^24.6.4",
-        "rollup-plugin-terser": "^7.0.2",
-        "sass": "^1.69.4",
+        "@electron/asar": "^3.2.8",
+        "@vitejs/plugin-vue": "^4.5.1",
+        "electron": "^25.9.7",
+        "electron-builder": "^24.9.1",
+        "sass": "^1.69.5",
         "sass-loader": "^13.3.2",
-        "unplugin-auto-import": "^0.16.6",
+        "unplugin-auto-import": "^0.16.7",
         "unplugin-vue-components": "^0.25.2",
-        "vite": "^4.4.11",
+        "vite": "^4.5.1",
         "vite-plugin-pages": "^0.31.0",
         "vite-plugin-style-import": "^2.0.0"
     }

@@ -1,7 +1,15 @@
-// preload.js
-
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('electron', {
-    ipcRenderer
+    ipcRenderer: {
+        on: (channel, listener) => {
+            ipcRenderer.on(channel, listener);
+        },
+        send: (channel, data) => {
+            ipcRenderer.send(channel, data);
+        },
+        invoke: (channel, data) => {
+            return ipcRenderer.invoke(channel, data);
+        }
+    }
 });
