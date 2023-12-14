@@ -17,17 +17,8 @@
                 ".post-content-content h2+p+p+p"
             ],
             "id": 2,
-            "update": true
-        },
-        {
-            "url": "https://v2cross.com/",
-            "sel": [
-                ".entry-title a",
-                ".entry-content h5"
-            ],
-            "id": 3,
-            "update": true,
-            "shibai": 2
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://www.butnono.com/daily-v2ray-airport.html",
@@ -112,25 +103,6 @@
             "update": true
         },
         {
-            "url": "https://www.crazygeeky.com/",
-            "sel": [
-                ".post-item-list:nth-child(2) .a-link",
-                ".puock-text p:nth-child(25)"
-            ],
-            "id": 13,
-            "update": false,
-            "shibai": 10
-        },
-        {
-            "url": "https://www.vpntizi.com/free/",
-            "sel": [
-                null,
-                ".wp-block-preformatted"
-            ],
-            "id": 14,
-            "update": true
-        },
-        {
             "url": "https://github.com/free18/v2ray",
             "sel": [
                 null,
@@ -145,7 +117,7 @@
                 null,
                 "article ul:nth-child(6) li:nth-child(4)"
             ],
-            "id": 15,
+            "id": 16,
             "update": true
         }
     ]
