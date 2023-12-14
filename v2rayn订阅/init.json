@@ -18,7 +18,7 @@
             ],
             "id": 2,
             "update": false,
-            "shibai": 1
+            "shibai": 2
         },
         {
             "url": "https://www.butnono.com/daily-v2ray-airport.html",
@@ -26,7 +26,7 @@
                 null,
                 "a[rel=\"noreferrer noopener sponsored nofollow\"]"
             ],
-            "id": 4,
+            "id": 3,
             "update": true,
             "shibai": 3
         },
@@ -36,7 +36,7 @@
                 ".clamp",
                 "pre"
             ],
-            "id": 5,
+            "id": 4,
             "update": true
         },
         {
@@ -45,7 +45,7 @@
                 null,
                 "article p:nth-child(5) a"
             ],
-            "id": 6,
+            "id": 5,
             "update": true
         },
         {
@@ -54,7 +54,7 @@
                 null,
                 "article code"
             ],
-            "id": 7,
+            "id": 6,
             "update": true
         },
         {
@@ -63,7 +63,7 @@
                 null,
                 "article [dir=\"auto\"]:nth-child(5) li:nth-child(2) code"
             ],
-            "id": 8,
+            "id": 7,
             "update": true
         },
         {
@@ -72,7 +72,7 @@
                 null,
                 "h5 a[rel=\"nofollow\"]"
             ],
-            "id": 9,
+            "id": 8,
             "update": true
         },
         {
@@ -81,7 +81,7 @@
                 null,
                 "article [dir=\"auto\"]:nth-child(9) a"
             ],
-            "id": 10,
+            "id": 9,
             "update": true
         },
         {
@@ -90,7 +90,7 @@
                 ".entry-title a",
                 ".post-body p:nth-child(9)"
             ],
-            "id": 11,
+            "id": 10,
             "update": true
         },
         {
@@ -99,7 +99,16 @@
                 ".list-body a",
                 ".panel-body p:nth-child(21) strong"
             ],
-            "id": 12,
+            "id": 11,
+            "update": true
+        },
+        {
+            "url": "https://freenode.openrunner.net/",
+            "sel": [
+                ".mb-5",
+                ".highlight code"
+            ],
+            "id": 11,
             "update": true
         },
         {
@@ -108,7 +117,7 @@
                 null,
                 "article p:nth-child(14) a"
             ],
-            "id": 15,
+            "id": 12,
             "update": true
         },
         {
@@ -117,7 +126,7 @@
                 null,
                 "article ul:nth-child(6) li:nth-child(4)"
             ],
-            "id": 16,
+            "id": 13,
             "update": true
         }
     ]
