@@ -18,7 +18,7 @@
             ],
             "id": 2,
             "update": false,
-            "shibai": 3
+            "shibai": 4
         },
         {
             "url": "https://www.butnono.com/daily-v2ray-airport.html",
@@ -27,8 +27,8 @@
                 "a[rel=\"noreferrer noopener sponsored nofollow\"]"
             ],
             "id": 3,
-            "update": true,
-            "shibai": 3
+            "update": false,
+            "shibai": 4
         },
         {
             "url": "https://www.iyio.net/search/label/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9",
@@ -37,7 +37,8 @@
                 "pre"
             ],
             "id": 4,
-            "update": true
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://github.com/ZywChannel/free",
@@ -46,7 +47,8 @@
                 "article p:nth-child(5) a"
             ],
             "id": 5,
-            "update": true
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://github.com/anaer/Sub",
@@ -55,7 +57,8 @@
                 "article code"
             ],
             "id": 6,
-            "update": true
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://github.com/ermaozi/get_subscribe",
@@ -64,7 +67,8 @@
                 "article [dir=\"auto\"]:nth-child(5) li:nth-child(2) code"
             ],
             "id": 7,
-            "update": true
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://github.com/Pawdroid/Free-servers",
@@ -73,7 +77,8 @@
                 "h5 a[rel=\"nofollow\"]"
             ],
             "id": 8,
-            "update": true
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://github.com/ripaojiedian/freenode",
@@ -82,7 +87,8 @@
                 "article [dir=\"auto\"]:nth-child(9) a"
             ],
             "id": 9,
-            "update": true
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://telegeam.github.io/blog1/",
@@ -91,7 +97,8 @@
                 ".markdown-body p:nth-child(12)"
             ],
             "id": 10,
-            "update": true
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://www.mibei77.com/search/label/jiedian",
@@ -99,16 +106,19 @@
                 ".entry-title a",
                 "#post-body p:nth-child(9)"
             ],
-            "id": 10,
-            "update": true
-        },    {
+            "id": 11,
+            "update": false,
+            "shibai": 1
+        },
+        {
             "url": "https://www.crazygeeky.com/category/151/",
             "sel": [
                 "article .a-link",
                 ".entry-content p:nth-child(29)"
             ],
-            "id": 10,
-            "update": true
+            "id": 12,
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://kkzui.com/jd",
@@ -116,8 +126,9 @@
                 ".list-body a",
                 ".panel-body p:nth-child(21) strong"
             ],
-            "id": 11,
-            "update": true
+            "id": 13,
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://freenode.openrunner.net/",
@@ -125,8 +136,9 @@
                 ".mb-5",
                 ".highlight code"
             ],
-            "id": 12,
-            "update": true
+            "id": 14,
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://github.com/free18/v2ray",
@@ -134,8 +146,9 @@
                 null,
                 "article p:nth-child(14) a"
             ],
-            "id": 13,
-            "update": true
+            "id": 15,
+            "update": false,
+            "shibai": 1
         },
         {
             "url": "https://github.com/Flik6/getNode",
@@ -143,7 +156,7 @@
                 null,
                 "article ul:nth-child(6) li:nth-child(4)"
             ],
-            "id": 14,
+            "id": 16,
             "update": true
         }
     ]
