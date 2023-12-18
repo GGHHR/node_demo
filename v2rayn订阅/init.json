@@ -18,7 +18,7 @@
             ],
             "id": 2,
             "update": false,
-            "shibai": 5
+            "shibai": 6
         },
         {
             "url": "https://www.butnono.com/daily-v2ray-airport.html",
@@ -96,7 +96,7 @@
                 ".entry-title a",
                 "#post-body p:nth-child(9)"
             ],
-            "id": 11,
+            "id": 10,
             "update": true,
             "shibai": 1
         },
@@ -106,8 +106,8 @@
                 "article .a-link",
                 ".entry-content p:nth-child(29)"
             ],
-            "id": 12,
-            "update": false,
+            "id": 11,
+            "update": true,
             "shibai": 2
         },
         {
@@ -116,7 +116,7 @@
                 ".list-body a",
                 ".panel-body p:nth-child(21) strong"
             ],
-            "id": 13,
+            "id": 12,
             "update": true,
             "shibai": 1
         },
@@ -126,7 +126,7 @@
                 ".mb-5",
                 ".highlight code"
             ],
-            "id": 14,
+            "id": 13,
             "update": true,
             "shibai": 1
         },
@@ -136,7 +136,7 @@
                 null,
                 "article p:nth-child(14) a"
             ],
-            "id": 15,
+            "id": 14,
             "update": true,
             "shibai": 1
         },
@@ -146,7 +146,7 @@
                 null,
                 "article ul:nth-child(6) li:nth-child(4)"
             ],
-            "id": 16,
+            "id": 15,
             "update": true
         }
     ]

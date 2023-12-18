@@ -143,7 +143,6 @@ async function main() {
             v.update=true;
         } catch (e) {
             v.update=false;
-            v.shibai=v.shibai?v.shibai+1:1;
             console.log(`${i + 1}失败：`+ v.url);
         }
     }));
