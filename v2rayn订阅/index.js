@@ -140,9 +140,7 @@ async function main() {
         v.id=i+1;
         try {
             await new SubGet(browser).initialize(v.url, v.sel, i + 1, i + 1);
-            v.update=true;
         } catch (e) {
-            v.update=false;
             console.log(`${i + 1}失败：`+ v.url);
         }
     }));

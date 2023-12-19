@@ -7,7 +7,7 @@
                 ".section p"
             ],
             "id": 1,
-            "update": false,
+            "update": true,
             "shibai": 1
         },
         {
@@ -17,7 +17,7 @@
                 ".post-content-content h2+p+p+p"
             ],
             "id": 2,
-            "update": false,
+            "update": true,
             "shibai": 5
         },
         {
@@ -27,7 +27,7 @@
                 "a[rel=\"noreferrer noopener sponsored nofollow\"]"
             ],
             "id": 3,
-            "update": false,
+            "update": true,
             "shibai": 4
         },
         {
@@ -37,16 +37,6 @@
                 "pre"
             ],
             "id": 4,
-            "update": true,
-            "shibai": 1
-        },
-        {
-            "url": "https://github.com/ZywChannel/free",
-            "sel": [
-                null,
-                "article p:nth-child(5) a"
-            ],
-            "id": 5,
             "update": true,
             "shibai": 1
         },
@@ -127,7 +117,7 @@
                 ".highlight code"
             ],
             "id": 13,
-            "update": false,
+            "update": true,
             "shibai": 1
         },
         {
