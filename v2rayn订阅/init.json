@@ -7,18 +7,18 @@
                 ".section p"
             ],
             "id": 1,
-            "update": true,
+            "update": false,
             "shibai": 1
         },
         {
             "url": "https://clashnode.com/",
             "sel": [
-                "[cp-post-title] a",
+                "ul  li[cp-post-item]:nth-child(2) a",
                 ".post-content-content h2+p+p+p"
             ],
             "id": 2,
             "update": false,
-            "shibai": 6
+            "shibai": 5
         },
         {
             "url": "https://www.butnono.com/daily-v2ray-airport.html",
@@ -27,7 +27,7 @@
                 "a[rel=\"noreferrer noopener sponsored nofollow\"]"
             ],
             "id": 3,
-            "update": true,
+            "update": false,
             "shibai": 4
         },
         {
@@ -127,7 +127,7 @@
                 ".highlight code"
             ],
             "id": 13,
-            "update": true,
+            "update": false,
             "shibai": 1
         },
         {
