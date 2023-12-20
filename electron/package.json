@@ -38,20 +38,20 @@
         }
     },
     "dependencies": {
-        "electron-store": "^7.0.0",
         "axios": "^1.6.2",
         "electron-log": "^4.4.8",
+        "electron-store": "^7.0.3",
         "electron-updater": "^6.1.7",
-        "element-plus": "^2.4.3",
+        "element-plus": "^2.4.4",
         "pinia": "^2.1.7",
-        "pinia-plugin-persistedstate": "^3.2.0",
-        "vue": "^3.3.10",
+        "pinia-plugin-persistedstate": "^3.2.1",
+        "vue": "^3.3.12",
         "vue-router": "^4.2.5"
     },
     "devDependencies": {
         "@electron/asar": "^3.2.8",
-        "@vitejs/plugin-vue": "^4.5.1",
-        "electron": "^25.9.7",
+        "@vitejs/plugin-vue": "^4.5.2",
+        "electron": "^25.9.8",
         "electron-builder": "^24.9.1",
         "sass": "^1.69.5",
         "sass-loader": "^13.3.2",

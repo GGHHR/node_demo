@@ -145,7 +145,7 @@
                 null,
                 "article ul:nth-child(8) code"
             ],
-            "id": 14
+            "id": 15
         },
         {
             "url": "https://cn.tgstat.com/channel/@ZDYZ2",
@@ -153,7 +153,7 @@
                 null,
                 ".indent-for-blocks a:nth-child(4)"
             ],
-            "id": 14
+            "id": 16
         }
     ]
 }
