@@ -154,6 +154,14 @@
                 ".indent-for-blocks a:nth-child(4)"
             ],
             "id": 16
+        },
+        {
+            "url": "https://free.datiya.com/",
+            "sel": [
+                ".pl3-ns a",
+                ".nested-copy-line-height pre+p+pre code"
+            ],
+            "id": 16
         }
     ]
 }
