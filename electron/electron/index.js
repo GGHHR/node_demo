@@ -33,8 +33,7 @@ const createWindow = () => {
     });
 
     const indexPath = path.join('dist', 'index.html');
-    win.loadFile(indexPath)
-    // win.loadURL('http://localhost:5173/#/')
+    app.isPackaged ? win.loadFile(indexPath) : win.loadURL('http://localhost:5173/#/');
 
     const menu = new Menu()
     menu.append(new MenuItem({
