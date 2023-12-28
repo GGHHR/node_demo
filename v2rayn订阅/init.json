@@ -102,11 +102,9 @@
             "url": "https://kkzui.com/jd",
             "sel": [
                 ".list-body a",
-                ".panel-body p:nth-child(21) strong"
+                ".panel-body p:nth-child(22) strong"
             ],
-            "id": 11,
-            "update": true,
-            "shibai": 1
+            "id": 11
         },
         {
             "url": "https://freenode.openrunner.net/",
