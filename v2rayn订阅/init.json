@@ -93,7 +93,7 @@
         {
             "url": "https://www.crazygeeky.com/category/151/",
             "sel": [
-                "article .a-link",
+                "article:nth-child(2) .a-link",
                 ".entry-content p:nth-child(29) a"
             ],
             "id": 10
