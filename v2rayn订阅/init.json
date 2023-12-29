@@ -158,6 +158,14 @@
                 ".nested-copy-line-height pre+p+pre code"
             ],
             "id": 17
+        },
+        {
+            "url": "https://github.com/freenodes/freenodes",
+            "sel": [
+                null,
+                "article ul:nth-child(14) li a"
+            ],
+            "id": 17
         }
     ]
 }
