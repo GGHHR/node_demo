@@ -35,21 +35,24 @@ class SubGet {
         this.browser = browser;
     }
     async initialize(url,sel, remarks, id) {
+
+        if(sel==undefined){
+            let convertTarget = "";
+            if (url.endsWith("yaml"||"yml")) {
+                convertTarget = "mixed";
+            }
+            console.log(`链接${id}：${url}`);
+            // 调用 UpSubItem.Up() 函数
+            return  await  UpSubItem(url, remarks, id, convertTarget); // 等待函数完成
+        }
+
         this.url = url;
         this.listEl = sel[0];
         this.el = sel[1];
         this.remarks = remarks;
         this.id = id;
 
-        if(!this.el&&!this.listEl){
-            let convertTarget = "";
-            if (match.endsWith("yaml"||"yml")) {
-                convertTarget = "mixed";
-            }
-            console.log(`链接${this.remarks}：${match}`);
-            // 调用 UpSubItem.Up() 函数
-            return  await  UpSubItem(this.url, this.remarks, this.id, convertTarget); // 等待函数完成
-        }
+
 
         await this.start();
 
@@ -149,7 +152,6 @@ async function main() {
         select  = JSON.parse(fs.readFileSync('./init.json', 'utf8'));
         console.log('请求失败，用本地的json文件')
     }
-
 
     await Promise.all(select.select.map(async (v, i) => {
         v.id=i+1;
