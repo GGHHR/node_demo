@@ -182,6 +182,14 @@
                 ".article-content p:nth-child(17)"
             ],
             "id": 19
+        },
+        {
+            "url": "https://weoknow.com/index.php/article/464.html",
+            "sel": [
+                null,
+                ".article-content p:nth-child(21)"
+            ],
+            "id": 19
         }
     ]
 }
