@@ -41,7 +41,20 @@ class SubGet {
         this.remarks = remarks;
         this.id = id;
 
+        if(!this.el&&!this.listEl){
+            let convertTarget = "";
+            if (match.endsWith("yaml"||"yml")) {
+                convertTarget = "mixed";
+            }
+            console.log(`链接${this.remarks}：${match}`);
+            // 调用 UpSubItem.Up() 函数
+            return  await  UpSubItem(this.url, this.remarks, this.id, convertTarget); // 等待函数完成
+        }
+
         await this.start();
+
+
+
     }
 
     async start() {
@@ -57,6 +70,8 @@ class SubGet {
             await page.goto(content,{timeout:99999});
             console.log('正在：' + content);
         }
+
+
         await page.waitForSelector(this.el,{timeout:99999});
         content = await page.$eval(this.el, element => element.textContent);
 

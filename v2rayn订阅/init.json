@@ -169,10 +169,7 @@
         },
         {
             "url": "https://github.com/aiboboxx/clashfree/blob/main/clash.yml",
-            "sel": [
-                null,
-                ".cjbBGq a.types__StyledButton-sc-ws60qy-0"
-            ],
+
             "id": 19
         }
     ]
