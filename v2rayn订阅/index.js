@@ -42,7 +42,6 @@ class SubGet {
                 convertTarget = "mixed";
             }
             console.log(`链接${id}：${url}`);
-            console.log(convertTarget);
             // 调用 UpSubItem.Up() 函数
             return  await  UpSubItem(url, remarks, id, convertTarget); // 等待函数完成
         }
