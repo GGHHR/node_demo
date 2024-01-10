@@ -38,10 +38,11 @@ class SubGet {
 
         if(sel==undefined){
             let convertTarget = "";
-            if (url.endsWith("yaml"||"yml")) {
+            if (url.endsWith("yaml") || url.endsWith("yml")) {
                 convertTarget = "mixed";
             }
             console.log(`链接${id}：${url}`);
+            console.log(convertTarget);
             // 调用 UpSubItem.Up() 函数
             return  await  UpSubItem(url, remarks, id, convertTarget); // 等待函数完成
         }
@@ -86,7 +87,7 @@ class SubGet {
 
         // 输出匹配的链接
         let convertTarget = "";
-        if (match.endsWith("yaml"||"yml")) {
+        if (match.endsWith("yaml") || match.endsWith("yml")) {
             convertTarget = "mixed";
         }
         console.log(`链接${this.remarks}：${match}`);
