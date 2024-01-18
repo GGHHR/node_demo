@@ -157,7 +157,28 @@
                 null,
                 "article ul:nth-child(14) li a"
             ],
-            "id": 18
+            "id": 17
+        },
+        {
+            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vless"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ss_with_plugin"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/temporary"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt"
         }
     ]
 }
