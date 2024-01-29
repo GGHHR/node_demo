@@ -12,10 +12,7 @@
       "sel": [
         "ul  li[cp-post-item]:nth-child(2) a",
         ".post-content-content h2+p+p+p"
-      ],
-      "id": 2,
-      "update": true,
-      "shibai": 5
+      ]
     },
     {
       "url": "https://www.butnono.com/daily-v2ray-airport.html",
