@@ -20,9 +20,7 @@
         null,
         "a[rel=\"noreferrer noopener sponsored nofollow\"]"
       ],
-      "id": 3,
-      "update": true,
-      "shibai": 4
+      "id": 3
     },
     {
       "url": "https://www.iyio.net/search/label/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9",
@@ -30,9 +28,7 @@
         ".clamp",
         "pre"
       ],
-      "id": 4,
-      "update": true,
-      "shibai": 1
+      "id": 4
     },
     {
       "url": "https://github.com/anaer/Sub",
@@ -40,9 +36,7 @@
         null,
         "article code"
       ],
-      "id": 5,
-      "update": true,
-      "shibai": 1
+      "id": 5
     },
     {
       "url": "https://github.com/ermaozi/get_subscribe",
@@ -50,9 +44,7 @@
         null,
         "article [dir=\"auto\"]:nth-child(5) li:nth-child(2) code"
       ],
-      "id": 6,
-      "update": true,
-      "shibai": 1
+      "id": 6
     },
     {
       "url": "https://github.com/Pawdroid/Free-servers",
@@ -60,9 +52,7 @@
         null,
         "h5 a[rel=\"nofollow\"]"
       ],
-      "id": 7,
-      "update": true,
-      "shibai": 1
+      "id": 7
     },
     {
       "url": "https://github.com/ripaojiedian/freenode",
@@ -70,9 +60,7 @@
         null,
         "article [dir=\"auto\"]:nth-child(9) a"
       ],
-      "id": 8,
-      "update": true,
-      "shibai": 1
+      "id": 8
     },
     {
       "url": "https://www.mibei77.com/search/label/jiedian",
@@ -80,9 +68,7 @@
         ".entry-title a",
         "#post-body p:nth-child(9)"
       ],
-      "id": 9,
-      "update": true,
-      "shibai": 1
+      "id": 9
     },
     {
       "url": "https://www.crazygeeky.com/category/151/",
@@ -116,9 +102,7 @@
         null,
         "article p:nth-child(14) a"
       ],
-      "id": 13,
-      "update": true,
-      "shibai": 1
+      "id": 13
     },
     {
       "url": "https://github.com/Flik6/getNode",
@@ -126,8 +110,7 @@
         null,
         "article ul:nth-child(6) li:nth-child(4)"
       ],
-      "id": 14,
-      "update": true
+      "id": 14
     },
     {
       "url": "https://github.com/aiboboxx/v2rayfree",
