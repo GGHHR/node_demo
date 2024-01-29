@@ -5,10 +5,7 @@
       "sel": [
         ".item-title a",
         ".section p"
-      ],
-      "id": 1,
-      "update": true,
-      "shibai": 1
+      ]
     },
     {
       "url": "https://clashnode.com/",
