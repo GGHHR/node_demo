@@ -52,10 +52,7 @@ class SubGet {
         this.remarks = remarks;
         this.id = id;
 
-
-
         await this.start();
-
 
 
     }
