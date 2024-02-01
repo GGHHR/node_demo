@@ -163,6 +163,26 @@
         {
             "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt",
             "id": 24
+        },
+        {
+            "url": "https://jiang.netlify.app/",
+            "id": 24
+        },
+        {
+            "url": "https://muma16fx.netlify.app/",
+            "id": 24
+        },
+        {
+            "url": "https://raw.githubusercontent.com/ssrsub/ssr/master/ssrsub",
+            "id": 24
+        },
+        {
+            "url": "https://www.liesauer.net/yogurt/subscribe",
+            "id": 24
+        },
+        {
+            "url": "https://qiaomenzhuanfx.netlify.app/",
+            "id": 24
         }
     ]
 }
