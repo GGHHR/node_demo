@@ -121,14 +121,6 @@
             "id": 15
         },
         {
-            "url": "https://cn.tgstat.com/channel/@ZDYZ2",
-            "sel": [
-                null,
-                ".indent-for-blocks a:nth-child(4)"
-            ],
-            "id": 16
-        },
-        {
             "url": "https://github.com/freenodes/freenodes",
             "sel": [
                 null,
@@ -147,14 +139,6 @@
         {
             "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vless",
             "id": 20
-        },
-        {
-            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr",
-            "id": 21
-        },
-        {
-            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ss_with_plugin",
-            "id": 22
         },
         {
             "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/temporary",
