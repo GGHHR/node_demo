@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        html{
+            font-size: 100px;
+            background-color: #F7F8FA;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            color: initial;
+        }
+
+        .head{
+            line-height: .6rem;
+            text-align: center;
+            flex-shrink: 0;
+            font-size: .2rem;
+            background: white;
+            box-shadow: 0px 1px 3px 0px #ccc;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        .con{
+            height: 100%;
+        }
+        .item{
+            width: 95%;
+            margin: .2rem auto;
+            border-radius: .15rem;
+            font-size: .25rem;
+            line-height: 1rem;
+            background-color: white;
+            box-shadow: 0px 1px 3px 0px #ccc;
+        }
+        .item span{
+            margin-left: .3rem;
+        }
+        .item img{
+            float: right;
+            width: .2rem;
+            margin-top: .38rem;
+            margin-right: .3rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="head">
+        报警信息
+</div>
+<div class="con">
+    <a href="">
+        <div class="item">
+            <span>123</span>
+            <img src="./jiantou_you.png" alt="">
+        </div>
+    </a>
+
+</div>
+<script>
+    let FZ=document.querySelector('body').clientWidth/750*100;
+    document.querySelector('html').style.fontSize=FZ+'px';
+
+    // document.querySelector('body').style.fontSize=FZ>110?110:FZ<80?80:FZ+'px'
+    window.onresize=function () {
+        let FZ=document.querySelector('body').clientWidth/750*100;
+        document.querySelector('html').style.fontSize=FZ+'px';
+    }
+
+   /* var para = document.createElement("p");
+    var node = document.createTextNode("hello world");
+    para.appendChild(node);
+    document.querySelector('.head').appendChild(para);*/
+</script>
+</body>
+</html>

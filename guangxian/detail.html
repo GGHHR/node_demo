@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        html{
+            font-size: 100px;
+            background-color: #F7F8FA;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            color: initial;
+        }
+
+        .head{
+            line-height: .6rem;
+            text-align: center;
+            flex-shrink: 0;
+            font-size: .2rem;
+            background: white;
+            box-shadow: 0px 1px 3px 0px #ccc;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        .con{
+            width: 100%;
+            height: 100%;
+            margin: .2rem auto;
+        }
+        .item{
+            width: 100%;
+            border-radius: .15rem;
+            font-size: .25rem;
+            line-height: 1rem;
+            background-color: white;
+        }
+        .item span{
+            margin-left: .3rem;
+        }
+        .item span:nth-child(1){
+            float: right;
+            margin-right: .3rem;
+        }
+        .head img{
+            position: absolute;
+            width: .2rem;
+            left: .3rem;
+            top: .2rem;
+            transform: rotate(180deg);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="head">
+    <img onclick="goBack()" src="./jiantou_you.png" alt="" class="back">报警信息详情
+</div>
+<div class="con">
+    <a href="">
+        <div class="item">
+            <span>123</span>
+            <span>33</span>
+        </div>
+    </a>
+
+</div>
+<script>
+    let FZ=document.querySelector('body').clientWidth/750*100;
+    document.querySelector('html').style.fontSize=FZ+'px';
+
+    // document.querySelector('body').style.fontSize=FZ>110?110:FZ<80?80:FZ+'px'
+    window.onresize=function () {
+        let FZ=document.querySelector('body').clientWidth/750*100;
+        document.querySelector('html').style.fontSize=FZ+'px';
+    }
+    function goBack() {
+        window.history.back();
+    }
+</script>
+</body>
+</html>
