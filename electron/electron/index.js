@@ -5,6 +5,8 @@ const Store = require('electron-store');
 
 const store = new Store();
 
+const { autoUpdater } = require('electron-updater');
+
 let path = require('path')
 
 
@@ -96,17 +98,43 @@ const createWindow = () => {
 }
 app.whenReady().then(() => {
     createWindow();
-    update();
 })
 
 
+function checkUpdate(){
 
+    autoUpdater.autoDownload = false;
 
-app.on('will-quit', () => {
+    autoUpdater.setFeedURL({
+        provider: 'generic',
+        url: 'http://127.0.0.1:3000/'
+    })
 
-})
-
-function update() {
-
-
+    //监听'error'事件
+    autoUpdater.on('error', (err) => {
+        console.log(err)
+    })
+    autoUpdater.checkForUpdates();
+    autoUpdater.on('update-available', () => {
+        dialog.showMessageBox({
+            type: 'info',
+            title: '应用更新',
+            message: '发现新版本，是否更新？',
+            buttons: ['否', '是']
+        }).then((buttonIndex) => {
+            if (buttonIndex.response === 1) {
+                // 用户选择是，执行安装新版本的逻辑
+                autoUpdater.quitAndInstall()
+            } else {
+                // 用户选择否，不执行安装新版本的逻辑
+                console.log('用户选择不更新');
+                autoUpdater.quit();
+            }
+        });
+    });
 }
+
+app.on('ready', () => {
+    //每次启动程序，就检查更新
+    checkUpdate()
+})
