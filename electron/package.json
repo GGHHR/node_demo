@@ -25,6 +25,12 @@
             "!public"
         ],
         "win": {
+            "publish": [
+                {
+                    "provider": "generic",
+                    "url": ""
+                }
+            ],
             "target": "nsis",
             "icon": "build/icon.ico"
         },
