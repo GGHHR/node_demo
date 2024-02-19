@@ -121,11 +121,7 @@
             "id": 15
         },
         {
-            "url": "https://github.com/freenodes/freenodes",
-            "sel": [
-                null,
-                "article ul:nth-child(14) li a"
-            ],
+            "url": "https://cdn.jsdelivr.net/gh/freenodes/freenodes@main/clash.yaml",
             "id": 16
         },
         {
@@ -147,9 +143,9 @@
         {
             "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt",
             "id": 21
-        },
+        } ,
         {
-            "url": "https://jiang.netlify.app/",
+            "url": "https://raw.githubusercontent.com/ssrsub/ssr/master/ssrsub",
             "id": 22
         }
     ]
