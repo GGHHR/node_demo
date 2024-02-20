@@ -147,6 +147,14 @@
         {
             "url": "https://raw.githubusercontent.com/ssrsub/ssr/master/ssrsub",
             "id": 22
+        },
+        {
+            "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
+            "id": 22
+        },
+        {
+            "url": "https://raw.fgit.ml/ts-sf/fly/main/v2",
+            "id": 22
         }
     ]
 }
