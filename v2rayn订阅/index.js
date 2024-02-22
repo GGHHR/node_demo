@@ -41,7 +41,7 @@ class SubGet {
             if (url.endsWith("yaml") || url.endsWith("yml")) {
                 convertTarget = "mixed";
             }
-            console.log(`链接${id}：${url}`);
+            console.log(id,`${url}`);
             // 调用 UpSubItem.Up() 函数
             return  await  UpSubItem(url, remarks, id, convertTarget); // 等待函数完成
         }
@@ -60,7 +60,7 @@ class SubGet {
     async start() {
         const page = await this.browser.newPage();
 
-        console.log('正在：' + this.url);
+        // console.log('正在：' + this.url);
 
         await page.goto(this.url,{timeout:99999});
         let content;
@@ -68,7 +68,7 @@ class SubGet {
             await page.waitForSelector(this.listEl,{timeout:99999});
             content = await page.$eval(this.listEl, element => element.href);
             await page.goto(content,{timeout:99999});
-            console.log('正在：' + content);
+            // console.log('正在：' + content);
         }
 
 
@@ -86,7 +86,8 @@ class SubGet {
         if (match.endsWith("yaml") || match.endsWith("yml")) {
             convertTarget = "mixed";
         }
-        console.log(`链接${this.remarks}：${match}`);
+        // console.log(`链接${this.remarks}：${match}`);
+        console.log(this.remarks,`${match}`);
         // 调用 UpSubItem.Up() 函数
         await  UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
 
