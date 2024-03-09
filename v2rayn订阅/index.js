@@ -8,7 +8,7 @@ const path = require("path");
 function getRunningV2raynPath() {
     return new Promise((resolve, reject) => {
         ps.lookup({
-            command: 'v2rayn.exe',
+            command: 'v2rayN.exe',
         }, (err, resultList) => {
             if (err) {
                 console.log('查询过程中出现错误：', err);
