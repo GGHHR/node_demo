@@ -1,27 +1,35 @@
 const puppeteer = require('puppeteer-core');
 const sqlite3 = require('sqlite3').verbose();
+const ps = require('ps-node');
 const fs = require("fs");
 const path = require("path");
-const find = require('find-process');
+
 
 function getRunningV2raynPath() {
     return new Promise((resolve, reject) => {
-        find('name', 'v2rayN.exe')
-            .then(function (list) {
-                if (!list.length) {
-                    console.log('v2rayn 未在运行');
-                    resolve(null);
-                } else {
-                    const v2raynProcess = list[0];
-                    const parsedPath = path.parse(v2raynProcess.cmd);
-                    resolve(parsedPath.dir);
-                }
-            }, function (err) {
+        ps.lookup({
+            command: 'v2rayN.exe',
+        }, (err, resultList) => {
+            if (err) {
                 console.log('查询过程中出现错误：', err);
                 reject(err);
-            });
+                return;
+            }
+
+            if (resultList.length > 0) {
+                const v2raynProcess = resultList[0];
+                const parsedPath = path.parse(v2raynProcess.command);
+
+                resolve(parsedPath.dir);
+            } else {
+                console.log('v2rayn 未在运行');
+                resolve(null);
+            }
+        });
     });
 }
+
+
 class SubGet {
     constructor(browser) {
         this.browser = browser;
