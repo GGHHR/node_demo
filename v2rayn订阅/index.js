@@ -172,24 +172,20 @@ const cleanupDatabase = async (num) => {
         console.log('命令:', command);
         if (command) {
             const outputValue = path.join(command, 'guiConfigs/guiNDB.db');
-            const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE);
-            const deleteSql = `DELETE FROM SubItem WHERE sort > ${num}`;
-            console.log('删除 SQL:', deleteSql);
-            db.exec(deleteSql, function (err) {
-                if (err) {
-                    console.error('删除记录时出错:', err.message);
-                } else {
-                    console.log('成功删除排序大于', num, '的记录。');
-                }
-            });
+            const db = sqlite3(outputValue); // Instantiate the database
+            const deleteSql = `DELETE FROM SubItem WHERE sort > ?`;
+            // Execute the SQL query using a prepared statement
+            try {
+                const stmt = db.prepare(deleteSql);
+                const info = stmt.run(num);
+                console.log(`成功删除排序大于 ${num} 的记录。已删除记录数: ${info.changes}`);
+            } catch (err) {
+                console.error('删除记录时出错:', err.message);
+            }
 
-            db.close((err) => {
-                if (err) {
-                    console.error('关闭数据库连接时出错:', err.message);
-                } else {
-                    console.log('已关闭数据库连接。');
-                }
-            });
+            // With better-sqlite3, the db.close() method is synchronous
+            db.close();
+            console.log('已关闭数据库连接。');
         } else {
             console.log('v2rayn 未在运行。');
         }
@@ -197,4 +193,3 @@ const cleanupDatabase = async (num) => {
         console.error('清理操作失败:', error);
     }
 };
-
