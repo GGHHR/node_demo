@@ -7,15 +7,12 @@
     "scripts": {
         "pkg": "pkg --public . -t node18-win-x64 --compress Brotli  --out-path=./"
     },
-    "pkg": {
-        "scripts": "node_modules/sqlite3/lib/binding/napi-v6-win32-unknown-x64/node_sqlite3.node"
-    },
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "better-sqlite3": "^9.4.3",
         "pkg": "^5.8.1",
         "ps-node": "^0.1.6",
-        "puppeteer-core": "^22.4.1",
-        "sqlite3": "^5.1.7"
+        "puppeteer-core": "^22.4.1"
     }
 }

@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer-core');
-const sqlite3 = require('sqlite3').verbose();
+const sqlite3 = require('better-sqlite3');
 const ps = require('ps-node');
 const fs = require("fs");
 const path = require("path");
@@ -95,25 +95,22 @@ class SubGet {
         await page.close();
     }
 }
-
 async function UpSubItem(url, remarks, id, convertTarget) {
     try {
         const command = await getRunningV2raynPath();
         if (command) {
             const outputValue = path.join(command, 'guiConfigs/guiNDB.db');
-            const db = new sqlite3.Database(outputValue, sqlite3.OPEN_READWRITE);
+            const db = sqlite3(outputValue); // Modified line
             const insertOrUpdateSql = `INSERT OR REPLACE INTO SubItem (remarks, url, id, convertTarget,sort) VALUES (?, ?, ?, ?, ?)`;
 
-            db.run(insertOrUpdateSql, [remarks, url, id, convertTarget, id], function (err) {
-                if (err) {
-                    console.error(err.message);
-                }
-                db.close((err) => {
-                    if (err) {
-                        console.error(err.message);
-                    }
-                });
-            });
+            try {
+                const stmt = db.prepare(insertOrUpdateSql); // Modified line
+                stmt.run(remarks, url, id, convertTarget, id); // Modified line
+            } catch (err) {
+                console.error(err.message);
+            }
+
+            // db.close(); // Optionally removed line
         } else {
             console.log('v2rayn 未在运行');
         }
@@ -156,7 +153,7 @@ async function main() {
         try {
             await new SubGet(browser).initialize(v.url, v.sel, i + 1, i + 1);
         } catch (e) {
-            console.log(`${i + 1}失败：`+ v.url);
+            console.log(`${i + 1}  失败：`+ v.url );
         }
     }));
 
