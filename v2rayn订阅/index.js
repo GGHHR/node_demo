@@ -54,7 +54,6 @@ class SubGet {
 
         await this.start();
 
-
     }
 
     async start() {
