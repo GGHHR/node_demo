@@ -104,7 +104,7 @@ async function UpSubItem(url, remarks, id, convertTarget) {
 
             try {
                 const stmt = db.prepare(insertOrUpdateSql); // Modified line
-                stmt.run(remarks, url, id, convertTarget, id); // Modified line
+                stmt.run(remarks+'', url, id, convertTarget, id); // Modified line
             } catch (err) {
                 console.error(err.message);
             }
