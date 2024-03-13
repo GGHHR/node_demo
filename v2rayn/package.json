@@ -7,10 +7,18 @@
     "scripts": {
         "pkg": "pkg --public . -t node18-win-x64 --compress Brotli  --out-path=./"
     },
+    "pkg": {
+        "scripts": "node_modules/**/*.node",
+        "assets": "node_modules/**/*.node",
+        "targets": [
+            "node18-win-x64"
+        ]
+    },
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "better-sqlite3": "^9.4.3",
+        "better-sqlite3": "^8.7.0",
+        "bindings": "^1.5.0",
         "pkg": "^5.8.1",
         "ps-node": "^0.1.6",
         "puppeteer-core": "^22.4.1"
