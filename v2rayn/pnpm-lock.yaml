@@ -8,9 +8,6 @@ dependencies:
   better-sqlite3:
     specifier: ^8.7.0
     version: 8.7.0
-  bindings:
-    specifier: ^1.5.0
-    version: 1.5.0
   pkg:
     specifier: ^5.8.1
     version: 5.8.1

@@ -14,7 +14,6 @@
     "license": "ISC",
     "dependencies": {
         "better-sqlite3": "^8.7.0",
-        "bindings": "^1.5.0",
         "pkg": "^5.8.1",
         "ps-node": "^0.1.6",
         "puppeteer-core": "^22.4.1"
