@@ -1,18 +1,14 @@
 {
     "name": "v2ray",
     "version": "1.0.0",
-    "description": "",
+    "description": "必须用node18",
     "main": "index.js",
     "bin": "index.js",
     "scripts": {
         "pkg": "pkg --public . -t node18-win-x64 --compress Brotli  --out-path=./"
     },
     "pkg": {
-        "scripts": "node_modules/**/*.node",
-        "assets": "node_modules/**/*.node",
-        "targets": [
-            "node18-win-x64"
-        ]
+        "scripts": "node_modules/**/*.node"
     },
     "author": "",
     "license": "ISC",
