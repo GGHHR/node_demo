@@ -129,6 +129,14 @@
             "id": 17
         },
         {
+            "url": "https://hiclash.com/t/v2rayn",
+            "sel": [
+                ".post-list a",
+                ".post-content-content p:nth-child(25)"
+            ],
+            "id": 17
+        },
+        {
             "url": "https://cdn.jsdelivr.net/gh/freenodes/freenodes@main/clash.yaml",
             "id": 18
         },
