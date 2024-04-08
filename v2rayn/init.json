@@ -14,7 +14,87 @@
                 ".col-lg-8 a",
                 ".post-content-content p:nth-child(23)"
             ],
+            "id": 2
+        },
+        {
+            "url": "https://t.me/s/hkaa0",
+            "sel": [
+                null,
+                "section .tgme_widget_message_wrap:last-child code:nth-child(10)"
+            ],
             "id": 3
+        },
+        {
+            "url": "https://t.me/s/hkaa0",
+            "sel": [
+                null,
+                "section .tgme_widget_message_wrap:last-child code:nth-child(23)"
+            ],
+            "id": 4
+        },
+        {
+            "url": "https://t.me/s/hkaa0",
+            "sel": [
+                null,
+                "section .tgme_widget_message_wrap:last-child code:nth-child(38)"
+            ],
+            "id": 5
+        },
+        {
+            "url": "https://t.me/s/hkaa0",
+            "sel": [
+                null,
+                "section .tgme_widget_message_wrap:last-child code:nth-child(53)"
+            ],
+            "id": 6
+        },
+        {
+            "url": "https://t.me/s/hkaa0",
+            "sel": [
+                null,
+                "section .tgme_widget_message_wrap:last-child code:nth-child(68)"
+            ],
+            "id": 7
+        },
+        {
+            "url": "https://t.me/s/hkaa0",
+            "sel": [
+                null,
+                "section .tgme_widget_message_wrap:last-child code:nth-child(83)"
+            ],
+            "id": 8
+        },
+        {
+            "url": "https://t.me/s/hkaa0",
+            "sel": [
+                null,
+                "section .tgme_widget_message_wrap:last-child code:nth-child(98)"
+            ],
+            "id": 9
+        },
+        {
+            "url": "https://t.me/s/hkaa0",
+            "sel": [
+                null,
+                "section .tgme_widget_message_wrap:last-child code:nth-child(113)"
+            ],
+            "id": 10
+        },
+        {
+            "url": "https://t.me/s/hkaa0",
+            "sel": [
+                null,
+                "section .tgme_widget_message_wrap:last-child code:nth-child(143)"
+            ],
+            "id": 11
+        },
+        {
+            "url": "https://t.me/s/hkaa0",
+            "sel": [
+                null,
+                "section .tgme_widget_message_wrap:last-child code:nth-child(158)"
+            ],
+            "id": 12
         },
         {
             "url": "https://www.freeclashnode.com/free-node/",
@@ -22,11 +102,19 @@
                 ".item-heading a",
                 ".post-content-content p:nth-child(16)"
             ],
-            "id": 4
+            "id": 13
+        },
+        {
+            "url": "https://freeclash.org/f/tag/v2ray%E8%8A%82%E7%82%B9",
+            "sel": [
+                ".post-item-main a",
+                ".post-content-content p:nth-child(22)"
+            ],
+            "id": 14
         },
         {
             "url": "https://raw.githubusercontent.com/jinqians/free/main/jinqians.txt",
-            "id": 5
+            "id": 15
         },
         {
             "url": "https://www.butnono.com/daily-v2ray-airport.html",
@@ -34,7 +122,7 @@
                 null,
                 "a[rel=\"noreferrer noopener sponsored nofollow\"]"
             ],
-            "id": 6
+            "id": 16
         },
         {
             "url": "https://www.iyio.net/search/label/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9",
@@ -42,7 +130,7 @@
                 ".clamp",
                 "pre"
             ],
-            "id": 7
+            "id": 17
         },
         {
             "url": "https://github.com/anaer/Sub",
@@ -50,7 +138,7 @@
                 null,
                 "article code"
             ],
-            "id": 8
+            "id": 18
         },
         {
             "url": "https://github.com/ermaozi/get_subscribe",
@@ -58,7 +146,7 @@
                 null,
                 "article [dir=\"auto\"]:nth-child(5) li:nth-child(2) code"
             ],
-            "id": 9
+            "id": 19
         },
         {
             "url": "https://github.com/Pawdroid/Free-servers",
@@ -66,7 +154,7 @@
                 null,
                 "h5 a[rel=\"nofollow\"]"
             ],
-            "id": 10
+            "id": 20
         },
         {
             "url": "https://github.com/ripaojiedian/freenode",
@@ -74,7 +162,7 @@
                 null,
                 "article [dir=\"auto\"]:nth-child(9) a"
             ],
-            "id": 11
+            "id": 21
         },
         {
             "url": "https://www.mibei77.com/",
@@ -82,7 +170,7 @@
                 ".entry-title a",
                 "#post-body p:nth-child(10)"
             ],
-            "id": 12
+            "id": 22
         },
         {
             "url": "https://www.crazygeeky.com/category/151/",
@@ -90,7 +178,7 @@
                 "article:nth-child(2) .a-link",
                 ".entry-content p:nth-child(35) a"
             ],
-            "id": 13
+            "id": 23
         },
         {
             "url": "https://freenode.openrunner.net/",
@@ -98,11 +186,11 @@
                 ".mb-5",
                 ".highlight code"
             ],
-            "id": 14
+            "id": 24
         },
         {
             "url": "https://raw.githubusercontent.com/freefq/free/master/v2",
-            "id": 15
+            "id": 25
         },
         {
             "url": "https://github.com/Flik6/getNode",
@@ -110,7 +198,7 @@
                 null,
                 "article ul:nth-child(6) li:nth-child(4)"
             ],
-            "id": 16
+            "id": 26
         },
         {
             "url": "https://github.com/aiboboxx/v2rayfree",
@@ -118,7 +206,23 @@
                 null,
                 "article ul:nth-child(8) code"
             ],
-            "id": 17
+            "id": 27
+        },
+        {
+            "url": "https://oneclash.cc/",
+            "sel": [
+                ".post_def_title a",
+                "article p:nth-child(20)"
+            ],
+            "id": 28
+        },
+        {
+            "url": "https://wenode.cc/",
+            "sel": [
+                ".post_def_title a",
+                "article p:nth-child(20)"
+            ],
+            "id": 29
         },
         {
             "url": "https://v2rayshare.com/",
@@ -126,35 +230,35 @@
                 ".list-body a",
                 ".card-body p:nth-child(17)"
             ],
-            "id": 19
+            "id": 30
         },
         {
             "url": "https://cdn.jsdelivr.net/gh/freenodes/freenodes@main/clash.yaml",
-            "id": 21
+            "id": 31
         },
         {
             "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan",
-            "id": 22
+            "id": 32
         },
         {
             "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess",
-            "id": 23
+            "id": 33
         },
         {
             "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vless",
-            "id": 24
+            "id": 34
         },
         {
             "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/temporary",
-            "id": 25
+            "id": 35
         },
         {
             "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt",
-            "id": 26
+            "id": 36
         },
         {
             "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
-            "id": 27
+            "id": 37
         }
     ]
 }
