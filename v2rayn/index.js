@@ -3,7 +3,7 @@ const sqlite3 = require('better-sqlite3');
 const ps = require('ps-node');
 const fs = require("fs");
 const path = require("path");
-
+let  not_clean_arr=[]
 
 function getRunningV2raynPath() {
     return new Promise((resolve, reject) => {
@@ -35,6 +35,8 @@ class SubGet {
         this.browser = browser;
     }
     async initialize(url,sel, remarks, id) {
+        not_clean_arr.push(id);
+
         num++;
         if(sel==undefined){
             let convertTarget = "";
@@ -46,13 +48,13 @@ class SubGet {
             // console.log(url, remarks, id, convertTarget);
             // console.log(url, num, num, convertTarget);
             // 调用 UpSubItem.Up() 函数
-            return  await  UpSubItem(url, num, num, convertTarget); // 等待函数完成
+            return  await  UpSubItem(url, id, id, convertTarget); // 等待函数完成
         }
 
         this.url = url;
         this.listEl = sel[0];
         this.el = sel[1];
-        this.remarks = remarks;
+        this.remarks = id;
         this.id = id;
 
         await this.start();
@@ -110,13 +112,12 @@ class SubGet {
             }
             // console.log(`链接${this.remarks}：${match}`);
             // 调用 UpSubItem.Up() 函数
-            num++;
-            let id=i==0?num:100+i;
+            this.id=i==0?this.id:100*this.id+i;
 
-            console.log(id,`${match}`);
+            console.log(this.id,`${match}`);
 
             // console.log(match, num,num, convertTarget)
-            UpSubItem(match, id,id, convertTarget);
+            UpSubItem(match, this.id,this.id, convertTarget);
         })
         // 定义匹配URL的正则表达式模式
         await page.close();
@@ -124,6 +125,7 @@ class SubGet {
     }
 }
 async function UpSubItem(url, remarks, id, convertTarget) {
+    not_clean_arr.push(id);
     try {
         const command = await getRunningV2raynPath();
         if (command) {
@@ -185,7 +187,7 @@ async function main() {
         }
     }));
 
-    await cleanupDatabase(select.select.length);
+    await cleanupDatabase(not_clean_arr);
     await fs.writeFileSync('./init.json',JSON.stringify(select),'utf-8');
     await browser.close()
     await process.exit(0);
@@ -193,25 +195,30 @@ async function main() {
 }
 
 main();
-
 const cleanupDatabase = async (num) => {
+    console.log(num)
     try {
         const command = await getRunningV2raynPath();
         console.log('命令:', command);
         if (command) {
             const outputValue = path.join(command, 'guiConfigs/guiNDB.db');
-            const db = sqlite3(outputValue); // Instantiate the database
-            const deleteSql = `DELETE FROM SubItem WHERE sort > ?`;
+            const db = sqlite3(outputValue); // Keep your original sqlite3 instantiation
+            // Convert the array of numbers into a list of placeholders for the SQL query
+            const placeholders = num.map(() => '?').join(', ');
+            const deleteSql = `DELETE FROM SubItem WHERE sort NOT IN (${placeholders})`;
+
+            console.log(placeholders)
+
             // Execute the SQL query using a prepared statement
             try {
                 const stmt = db.prepare(deleteSql);
-                const info = stmt.run(num);
-                console.log(`成功删除排序大于 ${num} 的记录。已删除记录数: ${info.changes}`);
+                const info = stmt.run(num); // Use the array directly if your library supports it
+                console.log(`成功删除排序不在 [${num.join(', ')}] 内的记录。已删除记录数: ${info.changes}`);
             } catch (err) {
                 console.error('删除记录时出错:', err.message);
             }
 
-            // With better-sqlite3, the db.close() method is synchronous
+            // Close the database connection
             db.close();
             console.log('已关闭数据库连接。');
         } else {
