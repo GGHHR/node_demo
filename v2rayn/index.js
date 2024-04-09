@@ -28,7 +28,7 @@ function getRunningV2raynPath() {
         });
     });
 }
-let num =0
+let num =0;
 
 class SubGet {
     constructor(browser) {
@@ -36,18 +36,14 @@ class SubGet {
     }
     async initialize(url,sel, remarks, id) {
         not_clean_arr.push(id);
-
-        num++;
         if(sel==undefined){
             let convertTarget = "";
             if (url.endsWith("yaml") || url.endsWith("yml")) {
                 convertTarget = "mixed";
             }
             console.log(id,`${url}`);
-            //
-            // console.log(url, remarks, id, convertTarget);
-            // console.log(url, num, num, convertTarget);
-            // 调用 UpSubItem.Up() 函数
+
+
             return  await  UpSubItem(url, id, id, convertTarget); // 等待函数完成
         }
 
@@ -75,49 +71,32 @@ class SubGet {
             // console.log('正在：' + content);
         }
 
-
         await page.waitForSelector(this.el,{timeout:99999});
-        /*content = await page.$eval(this.el, element => element.textContent);
-
-        // 定义匹配URL的正则表达式模式
-        const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*!/gi;
-
-        // 查找匹配的链接
-        const match = content.match(urlPattern)[0];
-
-        // 输出匹配的链接
-        let convertTarget = "";
-        if (match.endsWith("yaml") || match.endsWith("yml")) {
-            convertTarget = "mixed";
-        }
-        // console.log(`链接${this.remarks}：${match}`);
-        console.log(this.remarks,`${match}`);
-        // 调用 UpSubItem.Up() 函数
-        await  UpSubItem(match, this.remarks, this.id, convertTarget); // 等待函数完成
-*/
-
 
         let contents = await page.$$eval(this.el, elements => {
-
-            return  elements.map(element => element.textContent);
+             return  elements.map(element => element.textContent);
         });
-        contents.map((content,i)=>{
+        await contents.map(async (content,i)=>{
             const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
-            const match = content.match(urlPattern)[0];
 
+            let match ;
+            if(content.match(urlPattern)){
+                match = content.match(urlPattern)[0]
+            }else{
+                return ;
+            }
             // 输出匹配的链接
             let convertTarget = "";
             if (match.endsWith("yaml") || match.endsWith("yml")) {
                 convertTarget = "mixed";
             }
-            // console.log(`链接${this.remarks}：${match}`);
+
             // 调用 UpSubItem.Up() 函数
-            this.id=i==0?this.id:100*this.id+i;
+           let num=i==0?this.id:1000*this.id+i;
 
-            console.log(this.id,`${match}`);
+            console.log(num,`${match}`);
 
-            // console.log(match, num,num, convertTarget)
-            UpSubItem(match, this.id,this.id, convertTarget);
+           await UpSubItem(match, num,num, convertTarget);
         })
         // 定义匹配URL的正则表达式模式
         await page.close();
