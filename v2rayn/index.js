@@ -146,9 +146,10 @@ async function main() {
     });
 
     try {
-        console.log('请求远程json中')
         const page = await browser.newPage();
         let  url='https://raw.githubusercontent.com/GGHHR/node_demo/master/v2rayn/init.json';
+        console.log('请求远程json中：'+url);
+
         await page.goto(url,{timeout:99999});
         await page.waitForSelector('pre',{timeout:99999});
         let  content = await page.$eval('pre', element => element.textContent);
