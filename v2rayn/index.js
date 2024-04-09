@@ -4,7 +4,7 @@ const ps = require('ps-node');
 const fs = require("fs");
 const path = require("path");
 let  not_clean_arr=[]
-
+let num_add= 0;
 function getRunningV2raynPath() {
     return new Promise((resolve, reject) => {
         ps.lookup({
@@ -92,7 +92,12 @@ class SubGet {
             }
 
             // 调用 UpSubItem.Up() 函数
-           let num=i==0?this.id:1000*this.id+i;
+           let num=this.id;
+
+            if(i){
+                num_add++;
+                num=select.select.length+num_add;
+            }
 
             console.log(num,`${match}`);
 
@@ -130,9 +135,9 @@ async function UpSubItem(url, remarks, id, convertTarget) {
     }
 }
 
+let select ;
 
 async function main() {
-    let select ;
 
     let browser =   await puppeteer.launch({
         headless: "new",
@@ -174,6 +179,7 @@ async function main() {
 }
 
 main();
+
 const cleanupDatabase = async (num) => {
     console.log(num)
     try {
