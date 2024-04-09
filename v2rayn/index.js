@@ -99,7 +99,7 @@ class SubGet {
 
             return  elements.map(element => element.textContent);
         });
-        contents.map(content=>{
+        contents.map((content,i)=>{
             const urlPattern = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
             const match = content.match(urlPattern)[0];
 
@@ -109,11 +109,14 @@ class SubGet {
                 convertTarget = "mixed";
             }
             // console.log(`链接${this.remarks}：${match}`);
-            console.log(this.remarks,`${match}`);
             // 调用 UpSubItem.Up() 函数
             num++;
+            let id=i==0?num:100+i;
+
+            console.log(id,`${match}`);
+
             // console.log(match, num,num, convertTarget)
-            UpSubItem(match, num,num, convertTarget);
+            UpSubItem(match, id,id, convertTarget);
         })
         // 定义匹配URL的正则表达式模式
         await page.close();

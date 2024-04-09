@@ -20,6 +20,13 @@
             "url": "https://t.me/s/hkaa0",
             "sel": [
                 null,
+                "code"
+            ],
+            "id": 3
+        },{
+            "url": "https://t.me/s/hkaa0",
+            "sel": [
+                null,
                 "section .tgme_widget_message_wrap:last-child code:nth-child(10)"
             ],
             "id": 3
