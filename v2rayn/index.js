@@ -35,7 +35,11 @@ class SubGet {
         this.browser = browser;
     }
     async initialize(url,sel, remarks, id) {
-        not_clean_arr.push(id);
+        if(!not_clean_arr.includes(id)){
+            not_clean_arr.push(id);
+        }
+
+
         if(sel==undefined){
             let convertTarget = "";
             if (url.endsWith("yaml") || url.endsWith("yml")) {
@@ -108,7 +112,9 @@ class SubGet {
     }
 }
 async function UpSubItem(url, remarks, id, convertTarget) {
-    not_clean_arr.push(id);
+    if(!not_clean_arr.includes(id)){
+        not_clean_arr.push(id);
+    }
     try {
         const command = await getRunningV2raynPath();
         if (command) {
@@ -171,7 +177,7 @@ async function main() {
         }
     }));
 
-    await cleanupDatabase(not_clean_arr);
+    await cleanupDatabase(not_clean_arr.sort((a, b) => a - b));
     await fs.writeFileSync('./init.json',JSON.stringify(select),'utf-8');
     await browser.close()
     await process.exit(0);
