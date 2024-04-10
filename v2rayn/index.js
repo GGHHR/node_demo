@@ -185,7 +185,7 @@ const cleanupDatabase = async (num) => {
     console.log(num)
     try {
         const command = await getRunningV2raynPath();
-        console.log('命令:', command);
+
         if (command) {
             const outputValue = path.join(command, 'guiConfigs/guiNDB.db');
             const db = sqlite3(outputValue); // Keep your original sqlite3 instantiation
@@ -193,9 +193,7 @@ const cleanupDatabase = async (num) => {
             const placeholders = num.map(() => '?').join(', ');
             const deleteSql = `DELETE FROM SubItem WHERE sort NOT IN (${placeholders})`;
 
-            console.log(placeholders)
 
-            // Execute the SQL query using a prepared statement
             try {
                 const stmt = db.prepare(deleteSql);
                 const info = stmt.run(num); // Use the array directly if your library supports it
@@ -204,7 +202,6 @@ const cleanupDatabase = async (num) => {
                 console.error('删除记录时出错:', err.message);
             }
 
-            // Close the database connection
             db.close();
             console.log('已关闭数据库连接。');
         } else {
