@@ -41,8 +41,7 @@ class SubGet {
             if (url.endsWith("yaml") || url.endsWith("yml")) {
                 convertTarget = "mixed";
             }
-            console.log(id,`${url}`);
-
+            console.log(id,"订阅链接:",`${url}`);
 
             return  await  UpSubItem(url, id, id, convertTarget); // 等待函数完成
         }
@@ -99,7 +98,7 @@ class SubGet {
                 num=select.select.length+num_add;
             }
 
-            console.log(num,`${match}`);
+            console.log('json:',this.id,"v2rayn:",num,"订阅链接:",`${match}`);
 
            await UpSubItem(match, num,num, convertTarget);
         })
