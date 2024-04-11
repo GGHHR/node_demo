@@ -34,7 +34,7 @@ class SubGet {
     constructor(browser) {
         this.browser = browser;
     }
-    async initialize(url,sel, remarks, id) {
+    async initialize(url,sel, id) {
         if(!not_clean_arr.includes(id)){
             not_clean_arr.push(id);
         }
@@ -45,7 +45,7 @@ class SubGet {
             if (url.endsWith("yaml") || url.endsWith("yml")) {
                 convertTarget = "mixed";
             }
-            console.log(id,"订阅链接:",`${url}`);
+            console.log(id,`${url}`);
 
             return  await  UpSubItem(url, id, id, convertTarget); // 等待函数完成
         }
@@ -53,7 +53,6 @@ class SubGet {
         this.url = url;
         this.listEl = sel[0];
         this.el = sel[1];
-        this.remarks = id;
         this.id = id;
 
         await this.start();
@@ -63,15 +62,12 @@ class SubGet {
     async start() {
         const page = await this.browser.newPage();
 
-        // console.log('正在：' + this.url);
-
         await page.goto(this.url,{timeout:99999});
         let content;
         if (this.listEl) {
             await page.waitForSelector(this.listEl,{timeout:99999});
             content = await page.$eval(this.listEl, element => element.href);
             await page.goto(content,{timeout:99999});
-            // console.log('正在：' + content);
         }
 
         await page.waitForSelector(this.el,{timeout:99999});
@@ -102,7 +98,7 @@ class SubGet {
                 num=select.select.length+num_add;
             }
 
-            console.log('json:',this.id,"v2rayn:",num,"订阅链接:",`${match}`);
+            console.log(this.id,num,`${match}`);
 
            await UpSubItem(match, num,num, convertTarget);
         })
@@ -153,7 +149,7 @@ async function main() {
     try {
         const page = await browser.newPage();
         let  url='https://raw.githubusercontent.com/GGHHR/node_demo/master/v2rayn/init.json';
-        console.log('请求远程json中：'+url);
+        console.log('请求json中：'+url);
 
         await page.goto(url,{timeout:99999});
         await page.waitForSelector('pre',{timeout:99999});
@@ -163,15 +159,14 @@ async function main() {
         await page.close();
         console.log('请求成功')
     }catch (e){
-
         select  = JSON.parse(fs.readFileSync('./init.json', 'utf8'));
-        console.log('请求失败，用本地的json文件')
+        console.log('失败了，用本地的json文件')
     }
 
     await Promise.all(select.select.map(async (v, i) => {
         v.id=i+1;
         try {
-            await new SubGet(browser).initialize(v.url, v.sel, i + 1, i + 1);
+            await new SubGet(browser).initialize(v.url, v.sel, i + 1);
         } catch (e) {
             console.log(`${i + 1}  失败：`+ v.url );
         }
