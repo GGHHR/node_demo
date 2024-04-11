@@ -4,7 +4,7 @@
             "url": "https://nodefree.org/",
             "sel": [
                 ".item-title a",
-                ".section p"
+                ".section p:nth-child(2)"
             ],
             "id": 1
         },
