@@ -193,15 +193,14 @@ const cleanupDatabase = async (num) => {
 
         if (command) {
             const outputValue = path.join(command, 'guiConfigs/guiNDB.db');
-            const db = sqlite3(outputValue); // Keep your original sqlite3 instantiation
-            // Convert the array of numbers into a list of placeholders for the SQL query
+            const db = sqlite3(outputValue);
             const placeholders = num.map(() => '?').join(', ');
             const deleteSql = `DELETE FROM SubItem WHERE sort NOT IN (${placeholders})`;
 
 
             try {
                 const stmt = db.prepare(deleteSql);
-                const info = stmt.run(num); // Use the array directly if your library supports it
+                const info = stmt.run(num);
                 console.log(`成功删除排序不在 [${num.join(', ')}] 内的记录。已删除记录数: ${info.changes}`);
             } catch (err) {
                 console.error('删除记录时出错:', err.message);
