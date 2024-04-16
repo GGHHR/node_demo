@@ -54,6 +54,11 @@ class SubGet {
         this.listEl = sel[0];
         this.el = sel[1];
         this.id = id;
+        if(sel.length<2){
+            this.el=sel[0];
+            this.listEl=null;
+        }
+
 
         await this.start();
 
