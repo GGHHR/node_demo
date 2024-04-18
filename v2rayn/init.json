@@ -1,6 +1,22 @@
 {
     "select": [
         {
+            "url": "https://nodebird.net/",
+            "sel": [
+                ".post-item-main a",
+                ".post-content-content p:nth-child(17)"
+            ],
+            "id": 1
+        },
+        {
+            "url": "https://telegeam.github.io/clashv2rayshare/",
+            "sel": [
+                ".repo-list-name a",
+                "article p:nth-child(26)"
+            ],
+            "id": 1
+        },
+        {
             "url": "https://nodedog.org/t/v2ray",
             "sel": [
                 ".post_def_title a",
