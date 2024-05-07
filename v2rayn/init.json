@@ -121,10 +121,7 @@
             "id": 16
         },
         {
-            "url": "https://github.com/Pawdroid/Free-servers",
-            "sel": [
-                "article .markdown-heading:nth-of-type(6)"
-            ],
+            "url": "https://mirror.v2gh.com/https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
             "id": 17
         },
         {
@@ -170,10 +167,7 @@
             "id": 23
         },
         {
-            "url": "https://github.com/aiboboxx/v2rayfree",
-            "sel": [
-                "article ul:nth-child(8) code"
-            ],
+            "url": "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
             "id": 24
         },
         {
@@ -185,24 +179,12 @@
             "id": 25
         },
         {
-            "url": "https://wenode.cc/",
-            "sel": [
-                ".post_def_title a",
-                "article p:nth-child(20)"
-            ],
-            "id": 26
-        },
-        {
             "url": "https://v2rayshare.com/",
             "sel": [
                 ".list-body a",
                 ".post-content p"
             ],
             "id": 27
-        },
-        {
-            "url": "https://cdn.jsdelivr.net/gh/freenodes/freenodes@main/clash.yaml",
-            "id": 28
         },
         {
             "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan",
