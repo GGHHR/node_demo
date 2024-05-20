@@ -186,6 +186,7 @@ async function main() {
 
 main();
 
+
 const cleanupDatabase = async (num) => {
     console.log(num)
     try {
