@@ -7,11 +7,35 @@
                 ".entry-content p:nth-child(31) span+span"
             ],
             "id": 1
-        },{
+        }, {
+            "url": "https://nodecat.org/",
+            "sel": [
+                ".post_def_title a",
+                "article p:nth-of-type(17)"
+            ],
+            "id": 1
+        },
+        {
+            "url": "https://betternode.org/",
+            "sel": [
+                ".post_def_title a",
+                "article p:nth-of-type(16)"
+            ],
+            "id": 1
+        },
+        {
             "url": "https://wenode.cc/freenode",
             "sel": [
                 ".post_def_title a",
                 "article p:nth-of-type(15)"
+            ],
+            "id": 1
+        },
+        {
+            "url": "https://www.85la.com/internet-access/free-network-nodes",
+            "sel": [
+                ".ceo-h4",
+                "article p:nth-of-type(5) a"
             ],
             "id": 1
         },
