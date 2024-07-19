@@ -7,6 +7,13 @@
                 ".entry-content p:nth-child(31) span+span"
             ],
             "id": 1
+        },{
+            "url": "https://wenode.cc/freenode",
+            "sel": [
+                ".post_def_title a",
+                "article p:nth-of-type(15)"
+            ],
+            "id": 1
         },
         {
             "url": "https://github.com/mianfeifq/share",
@@ -191,9 +198,10 @@
         {
             "url": "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
             "id": 27
-        },{
+        },
+        {
             "url": "https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml",
-            "id": 27
+            "id": 28
         },
         {
             "url": "https://oneclash.cc/",
@@ -201,7 +209,7 @@
                 ".post_def_title a",
                 ".wznrys p:nth-of-type(15)"
             ],
-            "id": 28
+            "id": 29
         },
         {
             "url": "https://v2rayshare.com/",
@@ -209,31 +217,31 @@
                 ".list-body a",
                 ".post-content p:nth-of-type(14)"
             ],
-            "id": 29
-        },
-        {
-            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan",
             "id": 30
         },
         {
-            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess",
+            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan",
             "id": 31
         },
         {
-            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vless",
+            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess",
             "id": 32
         },
         {
-            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/temporary",
+            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vless",
             "id": 33
         },
         {
-            "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt",
+            "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/temporary",
             "id": 34
         },
         {
-            "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
+            "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt",
             "id": 35
+        },
+        {
+            "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
+            "id": 36
         }
     ]
 }
