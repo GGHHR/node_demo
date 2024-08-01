@@ -1,5 +1,21 @@
 {
-    "select": [{
+    "select": [
+        {
+            "url": "https://clashgithub.com/category/clashnode",
+            "sel": [
+                ".con a",
+                ".clearfix p:nth-of-type(11)"
+            ],
+            "id": 1
+        },{
+            "url": "https://www.fuye.fun/",
+            "sel": [
+                ".entry-title-link",
+                ".entry-content p:nth-child(31) span+span"
+            ],
+            "id": 1
+        },
+        {
             "url": "https://nodecat.org/",
             "sel": [
                 ".post_def_title a",
