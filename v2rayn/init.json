@@ -1,14 +1,5 @@
 {
-    "select": [
-        {
-            "url": "https://www.fuye.fun/",
-            "sel": [
-                ".entry-title-link",
-                ".entry-content p:nth-child(31) span+span"
-            ],
-            "id": 1
-        },
-        {
+    "select": [{
             "url": "https://nodecat.org/",
             "sel": [
                 ".post_def_title a",
