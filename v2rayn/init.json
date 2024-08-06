@@ -278,7 +278,11 @@
         },
         {
             "url": "https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Splitted-By-Protocol/vmess.txt",
-            "id": 41
+            "id": 42
+        },
+        {
+            "url": "https://jsd.onmicrosoft.cn/gh/anaer/Sub@main/clash.yaml",
+            "id": 42
         }
     ]
 }
