@@ -79,14 +79,6 @@
             "id": 10
         },
         {
-            "url": "https://nodebird.net/",
-            "sel": [
-                ".post-item-main a",
-                ".post-content-content p:nth-child(17)"
-            ],
-            "id": 11
-        },
-        {
             "url": "https://telegeam.github.io/clashv2rayshare/",
             "sel": [
                 ".repo-list-name a",
