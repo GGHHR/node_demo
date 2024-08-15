@@ -1,13 +1,22 @@
 {
     "select": [
         {
+            "url": "https://www.115xmw.com/",
+            "sel": [
+                ".excerpt h2  a",
+                "article p:nth-of-type(7)"
+            ],
+            "id": 1
+        },
+        {
             "url": "https://www.85la.com/internet-access/free-network-nodes",
             "sel": [
                 ".ceo-h4",
                 "article p:nth-of-type(9) a"
             ],
             "id": 1
-        },{
+        },
+        {
             "url": "https://clashgithub.com/category/clashnode",
             "sel": [
                 ".con a",
