@@ -34,7 +34,7 @@
         {
             "url": "https://www.85la.com/internet-access/free-network-nodes",
             "sel": [
-                ".ceo-h4",
+                ".col-9 a",
                 "article p:nth-of-type(2) a"
             ],
             "id": 5
