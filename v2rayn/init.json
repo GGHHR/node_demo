@@ -1,6 +1,12 @@
 {
     "select": [
         {
+            "url": "https://github.com/John19187/v2ray-SSR-Clash-Verge-Shadowrocke",
+            "sel": [
+                "article pre:nth-of-type(8)"
+            ],
+            "id": 1
+        },  {
             "url": "https://github.com/Cry1ngMan/1",
             "sel": [
                 "article code"
