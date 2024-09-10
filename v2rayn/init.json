@@ -68,14 +68,6 @@
             "id": 10
         },
         {
-            "url": "https://www.85la.com/internet-access/free-network-nodes",
-            "sel": [
-                ".ceo-h4",
-                "article p:nth-of-type(5) a"
-            ],
-            "id": 11
-        },
-        {
             "url": "https://v2cross.com/1884.html",
             "sel": [
                 ".entry-content h5"
