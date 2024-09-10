@@ -1,19 +1,6 @@
 {
     "select": [
         {
-            "url": "https://github.com/John19187/v2ray-SSR-Clash-Verge-Shadowrocke",
-            "sel": [
-                "article pre:nth-of-type(8)"
-            ],
-            "id": 1
-        },  {
-            "url": "https://github.com/Cry1ngMan/1",
-            "sel": [
-                "article code"
-            ],
-            "id": 1
-        },
-        {
             "url": "https://it.weoknow.com/data/dayupdate/1/z1.txt",
             "id": 2
         },
