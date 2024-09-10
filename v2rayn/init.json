@@ -88,13 +88,6 @@
             "id": 11
         },
         {
-            "url": "https://github.com/mianfeifq/share",
-            "sel": [
-                "article code"
-            ],
-            "id": 12
-        },
-        {
             "url": "https://v2cross.com/1884.html",
             "sel": [
                 ".entry-content h5"
