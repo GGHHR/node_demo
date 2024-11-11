@@ -21,6 +21,13 @@
             "id": 5
         },
         {
+            "url": "https://v2raynode.org/free/",
+            "sel": [
+                ".wp-block-preformatted"
+            ],
+            "id": 6
+        },
+        {
             "url": "https://github.com/v2rayw/v2rayw.github.io",
             "sel": [
                 "article ul:nth-of-type(2) li"
