@@ -145,7 +145,7 @@ let select;
 
 async function main() {
     let browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
         slowMo: 250,
         executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
     });
