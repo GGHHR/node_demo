@@ -28,7 +28,6 @@ function getRunningV2raynPath() {
         });
     });
 }
-let num =0;
 
 class SubGet {
     constructor(browser) {
