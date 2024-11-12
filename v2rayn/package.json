@@ -17,6 +17,6 @@
         "better-sqlite3": "^8.7.0",
         "pkg": "^5.8.1",
         "ps-node": "^0.1.6",
-        "puppeteer-core": "^22.7.1"
+        "puppeteer-core": "^22.15.0"
     }
 }
