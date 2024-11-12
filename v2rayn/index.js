@@ -28,6 +28,7 @@ function getRunningV2raynPath() {
         });
     });
 }
+let num =0;
 
 class SubGet {
     constructor(browser) {
@@ -153,7 +154,7 @@ async function main() {
     try {
         const page = await browser.newPage();
         let  url='https://raw.githubusercontent.com/GGHHR/node_demo/master/v2rayn/init.json';
-        console.log('请求json：'+url);
+        console.log('请求json中：'+url);
 
         await page.goto(url,{timeout:99999});
         await page.waitForSelector('pre',{timeout:99999});
@@ -184,7 +185,6 @@ async function main() {
 }
 
 main();
-
 
 const cleanupDatabase = async (num) => {
     console.log(num)
