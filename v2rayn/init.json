@@ -21,6 +21,13 @@
             "id": 5
         },
         {
+            "url": "https://github.com/John19187/v2ray-SSR-Clash-Verge-Shadowrocke",
+            "sel": [
+                "article pre:nth-of-type(6)"
+            ],
+            "id": 6
+        },
+        {
             "url": "https://v2raynode.org/free/",
             "sel": [
                 ".wp-block-preformatted"
