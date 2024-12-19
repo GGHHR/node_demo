@@ -17,6 +17,6 @@
         "pkg": "^5.8.1",
         "promise-limit": "^2.7.0",
         "ps-node": "^0.1.6",
-        "puppeteer-core": "^23.7.1"
+        "puppeteer-core": "^23.10.1"
     }
 }

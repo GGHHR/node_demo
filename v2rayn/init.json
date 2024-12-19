@@ -3,6 +3,9 @@
         {
             "url": "https://www.xrayvip.com/free.txt",
             "id": 1
+        },  {
+            "url": "https://raw.githubusercontent.com/a2470982985/getNode/main/v2ray.txt",
+            "id": 1
         },
         {
             "url": "https://raw.githubusercontent.com/snakem982/proxypool/main/source/v2ray-2.txt",
@@ -25,6 +28,12 @@
             "id": 6
         },
         {
+            "url": "https://github.com/qzwqzw/freeVpn",
+            "sel": [
+                "article code"
+            ],
+            "id": 7
+        }, {
             "url": "https://github.com/John19187/v2ray-SSR-Clash-Verge-Shadowrocke",
             "sel": [
                 "article pre:nth-of-type(6)"
@@ -110,14 +119,6 @@
             "id": 18
         },
         {
-            "url": "https://www.fuye.fun/",
-            "sel": [
-                ".entry-title-link",
-                ".entry-content p:nth-child(31) span+span"
-            ],
-            "id": 19
-        },
-        {
             "url": "https://nodecat.org/",
             "sel": [
                 ".post_def_title a",
@@ -151,7 +152,7 @@
         {
             "url": "https://tglaoshiji.github.io/clashnodev2raynode//",
             "sel": [
-                ".repo-list-name  a",
+                ".repo-list-item+.repo-list-item a",
                 "article p:nth-of-type(20)"
             ],
             "id": 24
@@ -167,8 +168,8 @@
         {
             "url": "https://telegeam.github.io/clashv2rayshare/",
             "sel": [
-                ".repo-list-name a",
-                "article p:nth-of-type(24)"
+                ".repo-list-item+.repo-list-item a",
+                "article p:nth-of-type(50)"
             ],
             "id": 26
         },
