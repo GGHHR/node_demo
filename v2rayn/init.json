@@ -108,7 +108,7 @@
             "url": "https://www.85la.com/internet-access/free-network-nodes",
             "sel": [
                 ".ceo-h4",
-                "article p:nth-of-type(9)"
+                "article p:nth-of-type(6)"
             ],
             "id": 19
         },
@@ -195,7 +195,7 @@
             "url": "https://nodefree.org/",
             "sel": [
                 ".item-title a",
-                ".section p:nth-child(2)"
+                ".section p"
             ],
             "id": 30
         },
@@ -203,7 +203,7 @@
             "url": "https://clashnode.github.io/",
             "sel": [
                 ".col-lg-8 a",
-                ".col-md-8 p:nth-of-type(23)"
+                ".xcblog-v2ray-box p"
             ],
             "id": 31
         },
@@ -269,7 +269,7 @@
             "url": "https://www.crazygeeky.com/category/151/",
             "sel": [
                 ".info-title a",
-                ".entry-content p:nth-of-type(17)"
+                "entry-content p:nth-of-type(17) a"
             ],
             "id": 41
         },
