@@ -145,8 +145,9 @@ let select;
 
 async function main() {
     let browser = await puppeteer.launch({
+        args: ['--blink-settings=imagesEnabled=false'],
         headless: true,
-        slowMo: 250,
+        slowMo: 0,
         executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
     });
 
@@ -167,7 +168,7 @@ async function main() {
         console.log('失败了，用本地的json文件');
     }
 
-    const limit = promiseLimit(10); // 设置并发限制为10
+    const limit = promiseLimit(5); // 设置并发限制为10
 
     const tasks = select.select.map((v, i) => {
         v.id = i + 1;
