@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 const sqlite3 = require('better-sqlite3');
 const ps = require('ps-node');
 const fs = require('fs');
@@ -148,7 +148,6 @@ async function main() {
         args: ['--blink-settings=imagesEnabled=false'],
         headless: true,
         slowMo: 0,
-        executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
     });
 
     try {
