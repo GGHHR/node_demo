@@ -108,7 +108,7 @@
             "url": "https://www.85la.com/internet-access/free-network-nodes",
             "sel": [
                 ".index-post-text-small a",
-                ".md_content p:nth-of-type(6) a"
+                "[rel=\"noopener\"]"
             ],
             "id": 19
         },
@@ -202,8 +202,8 @@
         {
             "url": "https://clashnode.github.io/",
             "sel": [
-                ".col-lg-8 a",
-                ".xcblog-v2ray-box p"
+                ".xcblog-blog-item:nth-of-type(2) a",
+                ".col-md-8 p:nth-of-type(18)"
             ],
             "id": 31
         },
@@ -221,14 +221,6 @@
                 ".post-content-content p:nth-of-type(15)"
             ],
             "id": 33
-        },
-        {
-            "url": "https://freeclash.org/f/tag/v2ray%E8%8A%82%E7%82%B9",
-            "sel": [
-                ".post-item-main a",
-                ".post-content-content p:nth-of-type(16)"
-            ],
-            "id": 34
         },
         {
             "url": "https://raw.githubusercontent.com/ssrsub/ssr/master/V2Ray",
@@ -269,7 +261,7 @@
             "url": "https://www.crazygeeky.com/category/151/",
             "sel": [
                 ".info-title a",
-                "entry-content p:nth-of-type(17) a"
+                "entry-content p:nth-of-type(18) a"
             ],
             "id": 41
         },
@@ -303,8 +295,8 @@
         {
             "url": "https://v2rayshare.com/",
             "sel": [
-                ".list-body a",
-                ".post-content p:nth-of-type(14)"
+                ".post-title a",
+                ".single-content p:nth-of-type(14)"
             ],
             "id": 47
         },
