@@ -200,14 +200,6 @@
             "id": 30
         },
         {
-            "url": "https://clashnode.github.io/",
-            "sel": [
-                ".xcblog-blog-item:nth-of-type(2) a",
-                ".col-md-8 p:nth-of-type(18)"
-            ],
-            "id": 31
-        },
-        {
             "url": "https://t.me/s/hkaa0",
             "sel": [
                 ".media_supported_cont code"
@@ -230,7 +222,7 @@
             "url": "https://www.iyio.net/search/label/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9",
             "sel": [
                 ".clamp",
-                "pre"
+                "#getV2ray"
             ],
             "id": 35
         },
@@ -260,8 +252,8 @@
         {
             "url": "https://www.crazygeeky.com/category/151/",
             "sel": [
-                ".info-title a",
-                "entry-content p:nth-of-type(18) a"
+                "article:nth-child(2) a",
+                ".entry-content p:nth-of-type(17) a"
             ],
             "id": 40
         },
