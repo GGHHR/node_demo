@@ -120,14 +120,6 @@
             "id": 20
         },
         {
-            "url": "https://clashgithub.com/category/clashnode",
-            "sel": [
-                ".con a",
-                ".clearfix p:nth-of-type(11)"
-            ],
-            "id": 21
-        },
-        {
             "url": "https://nodecat.org/",
             "sel": [
                 ".post_def_title a",
