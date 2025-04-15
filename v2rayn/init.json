@@ -34,6 +34,12 @@
                 "article code"
             ],
             "id": 8
+        },{
+            "url": "https://github.com/clash-2025/mianfeijiedian?tab=readme-ov-file",
+            "sel": [
+                "article p:nth-of-type(4) a"
+            ],
+            "id": 8
         },
         {
             "url": "https://github.com/John19187/v2ray-SSR-Clash-Verge-Shadowrocke",
@@ -200,6 +206,14 @@
             "id": 30
         },
         {
+            "url": "https://clashnode.github.io/",
+            "sel": [
+                ".xcblog-blog-item:nth-of-type(2) a",
+                ".col-md-8 p:nth-of-type(18)"
+            ],
+            "id": 31
+        },
+        {
             "url": "https://t.me/s/hkaa0",
             "sel": [
                 ".media_supported_cont code"
@@ -222,7 +236,7 @@
             "url": "https://www.iyio.net/search/label/%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9",
             "sel": [
                 ".clamp",
-                "#getV2ray"
+                "pre"
             ],
             "id": 35
         },
@@ -252,8 +266,8 @@
         {
             "url": "https://www.crazygeeky.com/category/151/",
             "sel": [
-                "article:nth-child(2) a",
-                ".entry-content p:nth-of-type(17) a"
+                ".info-title a",
+                "entry-content p:nth-of-type(18) a"
             ],
             "id": 40
         },
@@ -338,6 +352,10 @@
         },
         {
             "url": "https://q3dlaxpoaq.github.io/APIs/sc4.yaml",
+            "id": 58
+        },
+        {
+            "url": "https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/base64.txt",
             "id": 58
         }
     ]
