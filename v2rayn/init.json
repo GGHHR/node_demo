@@ -202,7 +202,7 @@
             "url": "https://clashnode.github.io/",
             "sel": [
                 ".xcblog-blog-item:nth-of-type(2) a",
-                ".col-md-8 p:nth-of-type(18)"
+                ".xcblog-v2ray-box p"
             ],
             "id": 31
         },
@@ -252,7 +252,7 @@
             "url": "https://www.crazygeeky.com/category/151/",
             "sel": [
                 ".info-title a",
-                "entry-content p:nth-of-type(18) a"
+                ".p-block p:nth-of-type(17) a"
             ],
             "id": 39
         },
