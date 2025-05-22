@@ -38,7 +38,7 @@
         {
             "url": "https://github.com/clash-2025/mianfeijiedian?tab=readme-ov-file",
             "sel": [
-                "article p:nth-of-type(4) a"
+                "p:nth-of-type(5)"
             ],
             "id": 9
         },
@@ -62,13 +62,6 @@
                 "article ul:nth-of-type(2) li"
             ],
             "id": 12
-        },
-        {
-            "url": "https://github.com/aiboboxx/kexueshangwang",
-            "sel": [
-                "article p:nth-of-type(5)"
-            ],
-            "id": 13
         },
         {
             "url": "https://github.com/v2raynodes/v2raynodes.github.io",
@@ -185,8 +178,8 @@
         {
             "url": "https://www.wanzhuanmi.com/",
             "sel": [
-                "article header a",
-                "article p:nth-of-type(13)"
+                "article+article .post-info .a-link",
+                "p:nth-of-type(12)"
             ],
             "id": 29
         },
@@ -201,8 +194,8 @@
         {
             "url": "https://clashnode.github.io/",
             "sel": [
-                ".xcblog-blog-item:nth-of-type(2) a",
-                ".xcblog-v2ray-box p"
+                ".xcblog-blog-item:nth-of-type(1) a",
+                ".xcblog-blog-detail p:nth-of-type(22)"
             ],
             "id": 31
         },
@@ -251,8 +244,8 @@
         {
             "url": "https://www.crazygeeky.com/category/151/",
             "sel": [
-                ".info-title a",
-                ".p-block p:nth-of-type(17) a"
+                ".info-title .a-link",
+                ".p-block p:nth-of-type(18) a"
             ],
             "id": 39
         },
