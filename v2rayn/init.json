@@ -3,6 +3,9 @@
         {
             "url": "https://www.xrayvip.com/free.txt",
             "id": 1
+        }, {
+            "url": "https://d.zrf.me/vless-base64",
+            "id": 1
         },
         {
             "url": "https://raw.githubusercontent.com/a2470982985/getNode/main/v2ray.txt",
@@ -27,6 +30,19 @@
         {
             "url": "https://cdn.jsdelivr.net/gh/ermaozi01/free_clash_vpn/subscribe/v2ray.txt",
             "id": 7
+        },
+        {
+            "url": "https://github.com/clash-v2ray-ssr/windows",
+            "sel": [
+                "article p:nth-of-type(5) a"
+            ],
+            "id": 8
+        },   {
+            "url": "https://github.com/clash-v2ray-ssr/telegram",
+            "sel": [
+                "article div:nth-of-type(6) code"
+            ],
+            "id": 8
         },
         {
             "url": "https://github.com/qzwqzw/freeVpn",
@@ -68,25 +84,25 @@
             "sel": [
                 "article ul:nth-of-type(2) li a"
             ],
-            "id": 14
+            "id": 13
         },
         {
             "url": "https://it.weoknow.com/data/dayupdate/1/z1.txt",
-            "id": 15
+            "id": 14
         },
         {
             "url": "https://github.com/mksshare/mksshare.github.io",
             "sel": [
                 "article code"
             ],
-            "id": 16
+            "id": 15
         },
         {
             "url": "https://github.com/tolinkshare2/tolinkshare2.github.io",
             "sel": [
                 ".notranslate .notranslate"
             ],
-            "id": 17
+            "id": 16
         },
         {
             "url": "https://www.freev2raynode.com/free-node-subscription/",
@@ -94,7 +110,7 @@
                 ".item-heading a",
                 ".post-content-content p:nth-of-type(16)"
             ],
-            "id": 18
+            "id": 17
         },
         {
             "url": "https://www.115xmw.com/",
@@ -102,7 +118,7 @@
                 ".entry-title a",
                 ".article_content p:nth-of-type(9)"
             ],
-            "id": 19
+            "id": 18
         },
         {
             "url": "https://www.85la.com/internet-access/free-network-nodes",
@@ -110,7 +126,7 @@
                 ".index-post-text-small a",
                 "[rel=\"noopener\"]"
             ],
-            "id": 20
+            "id": 19
         },
         {
             "url": "https://nodecat.org/",
@@ -118,7 +134,7 @@
                 ".post_def_title a",
                 "article p:nth-of-type(14)"
             ],
-            "id": 21
+            "id": 20
         },
         {
             "url": "https://betternode.org/",
@@ -126,7 +142,7 @@
                 ".post_def_title a",
                 "article p:nth-of-type(16)"
             ],
-            "id": 22
+            "id": 21
         },
         {
             "url": "https://wenode.cc/freenode",
@@ -134,14 +150,14 @@
                 ".post_def_title a",
                 "article p:nth-of-type(15)"
             ],
-            "id": 23
+            "id": 22
         },
         {
             "url": "https://v2cross.com/1884.html",
             "sel": [
                 ".entry-content h5"
             ],
-            "id": 24
+            "id": 23
         },
         {
             "url": "https://tglaoshiji.github.io/clashnodev2raynode//",
@@ -149,7 +165,7 @@
                 ".repo-list-item+.repo-list-item a",
                 "article ul:nth-of-type(2) li"
             ],
-            "id": 25
+            "id": 24
         },
         {
             "url": "https://free.datiya.com/",
@@ -157,7 +173,7 @@
                 ".fw1  a",
                 ".lh-copy pre:nth-of-type(2) code"
             ],
-            "id": 26
+            "id": 25
         },
         {
             "url": "https://telegeam.github.io/clashv2rayshare/",
@@ -165,7 +181,7 @@
                 ".repo-list-item+.repo-list-item a",
                 "article p:nth-of-type(50)"
             ],
-            "id": 27
+            "id": 26
         },
         {
             "url": "https://nodedog.org/t/v2ray",
@@ -173,7 +189,7 @@
                 ".post_def_title a",
                 ".wznrys p:nth-child(21)"
             ],
-            "id": 28
+            "id": 27
         },
         {
             "url": "https://www.wanzhuanmi.com/",
@@ -181,7 +197,7 @@
                 "article+article .post-info .a-link",
                 "p:nth-of-type(12)"
             ],
-            "id": 29
+            "id": 28
         },
         {
             "url": "https://nodefree.org/",
@@ -189,7 +205,7 @@
                 ".post-title a",
                 ".section p"
             ],
-            "id": 30
+            "id": 29
         },
         {
             "url": "https://clashnode.github.io/",
@@ -197,14 +213,14 @@
                 ".xcblog-blog-item:nth-of-type(1) a",
                 ".xcblog-blog-detail p:nth-of-type(22)"
             ],
-            "id": 31
+            "id": 30
         },
         {
             "url": "https://t.me/s/hkaa0",
             "sel": [
                 ".media_supported_cont code"
             ],
-            "id": 32
+            "id": 31
         },
         {
             "url": "https://www.freeclashnode.com/free-node/",
@@ -212,26 +228,26 @@
                 ".item-heading a",
                 ".post-content-content p:nth-of-type(15)"
             ],
-            "id": 33
+            "id": 32
         },
         {
             "url": "https://raw.githubusercontent.com/ssrsub/ssr/master/V2Ray",
-            "id": 34
+            "id": 33
         },
         {
             "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
-            "id": 35
+            "id": 34
         },
         {
             "url": "https://proxy.v2gh.com/https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
-            "id": 36
+            "id": 35
         },
         {
             "url": "https://github.com/ripaojiedian/freenode",
             "sel": [
                 "article [dir=\"auto\"]:nth-child(9) a"
             ],
-            "id": 37
+            "id": 36
         },
         {
             "url": "https://www.mibei77.com/",
@@ -239,7 +255,7 @@
                 ".entry-title a",
                 ".post-body p:nth-of-type(9)"
             ],
-            "id": 38
+            "id": 37
         },
         {
             "url": "https://www.crazygeeky.com/category/151/",
@@ -247,26 +263,26 @@
                 ".info-title .a-link",
                 ".p-block p:nth-of-type(18) a"
             ],
-            "id": 39
+            "id": 38
         },
         {
             "url": "https://raw.githubusercontent.com/freefq/free/master/v2",
-            "id": 40
+            "id": 39
         },
         {
             "url": "https://github.com/Flik6/getNode",
             "sel": [
                 "article ul:nth-child(6) li:nth-child(4)"
             ],
-            "id": 41
+            "id": 40
         },
         {
             "url": "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
-            "id": 42
+            "id": 41
         },
         {
             "url": "https://raw.githubusercontent.com/aiboboxx/clashfree/main/clash.yml",
-            "id": 43
+            "id": 42
         },
         {
             "url": "https://oneclash.cc/",
@@ -274,7 +290,7 @@
                 ".post_def_title a",
                 ".wznrys p:nth-of-type(15)"
             ],
-            "id": 44
+            "id": 43
         },
         {
             "url": "https://v2rayshare.com/",
@@ -282,59 +298,59 @@
                 ".post-title a",
                 ".single-content p:nth-of-type(14)"
             ],
-            "id": 45
+            "id": 44
         },
         {
             "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan",
-            "id": 46
+            "id": 45
         },
         {
             "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess",
-            "id": 47
+            "id": 46
         },
         {
             "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vless",
-            "id": 48
+            "id": 47
         },
         {
             "url": "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/temporary",
-            "id": 49
+            "id": 48
         },
         {
             "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt",
-            "id": 50
+            "id": 49
         },
         {
             "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
-            "id": 51
+            "id": 50
         },
         {
             "url": "https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Splitted-By-Protocol/vmess.txt",
-            "id": 52
+            "id": 51
         },
         {
             "url": "https://jsd.onmicrosoft.cn/gh/anaer/Sub@main/clash.yaml",
-            "id": 53
+            "id": 52
         },
         {
             "url": "https://q3dlaxpoaq.github.io/APIs/sc0.yaml",
-            "id": 54
+            "id": 53
         },
         {
             "url": "https://q3dlaxpoaq.github.io/APIs/sc2.yaml",
-            "id": 55
+            "id": 54
         },
         {
             "url": "https://q3dlaxpoaq.github.io/APIs/sc3.yaml",
-            "id": 56
+            "id": 55
         },
         {
             "url": "https://q3dlaxpoaq.github.io/APIs/sc4.yaml",
-            "id": 57
+            "id": 56
         },
         {
             "url": "https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/base64.txt",
-            "id": 58
+            "id": 57
         }
     ]
 }
