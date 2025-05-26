@@ -130,7 +130,7 @@ async function UpSubItem(url, remarks, id, convertTarget) {
                 console.error(err.message);
             }
 
-            // db.close(); // Optionally removed line
+            db.close();
         } else {
             console.log('v2rayn 未在运行');
         }
