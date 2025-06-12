@@ -102,7 +102,7 @@
         {
             "url": "https://github.com/tolinkshare2/tolinkshare2.github.io",
             "sel": [
-                ".notranslate .notranslate"
+                "article code"
             ],
             "id": 19
         },
@@ -110,7 +110,7 @@
             "url": "https://www.freev2raynode.com/free-node-subscription/",
             "sel": [
                 ".item-heading a",
-                ".post-content-content p:nth-of-type(16)"
+                ".post-content-content p:nth-of-type(14)"
             ],
             "id": 20
         },
@@ -118,7 +118,7 @@
             "url": "https://www.115xmw.com/",
             "sel": [
                 ".entry-title a",
-                ".article_content p:nth-of-type(9)"
+                ".main-article p:nth-of-type(9)"
             ],
             "id": 21
         },
