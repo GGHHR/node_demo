@@ -196,7 +196,7 @@
         {
             "url": "https://www.wanzhuanmi.com/",
             "sel": [
-                "article+article .post-info .a-link",
+                ".excerpt-latest a",
                 "p:nth-of-type(12)"
             ],
             "id": 31
@@ -213,7 +213,7 @@
             "url": "https://clashnode.github.io/",
             "sel": [
                 ".xcblog-blog-item:nth-of-type(1) a",
-                ".xcblog-blog-detail p:nth-of-type(22)"
+                ".xcblog-blog-detail .xcblog-clash-box p"
             ],
             "id": 33
         },
