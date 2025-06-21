@@ -1,6 +1,20 @@
 {
     "select": [
         {
+            "url": " https://ghfile.geekertao.top/https://github.com/PuddinCat/BestClash/blob/main/proxies.yaml",
+            "id": 1
+        },  {
+            "url": " https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt",
+            "id": 1
+        }, {
+            "url": "https://raw.githubusercontent.com/hello-world-1989/cn-news/main/end-gfw-together",
+            "id": 1
+        },
+        {
+            "url": "https://raw.githubusercontent.com/Leon406/SubCrawler/refs/heads/main/sub/share/v2",
+            "id": 1
+        },
+        {
             "url": "https://www.xrayvip.com/free.txt",
             "id": 1
         },
@@ -32,7 +46,6 @@
             "url": "https://cdn.jsdelivr.net/gh/ermaozi01/free_clash_vpn/subscribe/v2ray.txt",
             "id": 8
         },
-
         {
             "url": "https://github.com/qzwqzw/freeVpn",
             "sel": [
@@ -268,6 +281,9 @@
         },
         {
             "url": "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
+            "id": 45
+        }, {
+            "url": "https://raw.githubusercontent.com/somemoo/v2rayfree/main/v2rayfree",
             "id": 45
         },
         {
