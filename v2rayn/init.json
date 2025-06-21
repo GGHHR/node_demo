@@ -32,33 +32,13 @@
             "url": "https://cdn.jsdelivr.net/gh/ermaozi01/free_clash_vpn/subscribe/v2ray.txt",
             "id": 8
         },
-        {
-            "url": "https://github.com/clash-v2ray-ssr/windows",
-            "sel": [
-                "article p:nth-of-type(5) a"
-            ],
-            "id": 9
-        },
-        {
-            "url": "https://github.com/clash-v2ray-ssr/telegram",
-            "sel": [
-                "article div:nth-of-type(6) code"
-            ],
-            "id": 10
-        },
+
         {
             "url": "https://github.com/qzwqzw/freeVpn",
             "sel": [
                 "article code"
             ],
             "id": 11
-        },
-        {
-            "url": "https://github.com/clash-2025/mianfeijiedian?tab=readme-ov-file",
-            "sel": [
-                "p:nth-of-type(5)"
-            ],
-            "id": 12
         },
         {
             "url": "https://github.com/John19187/v2ray-SSR-Clash-Verge-Shadowrocke",
