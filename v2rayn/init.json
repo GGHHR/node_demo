@@ -167,6 +167,14 @@
             "id": 30
         },
         {
+            "url": "https://v2rayshare.net/",
+            "sel": [
+                ".text-reset",
+                "p:nth-of-type(15)"
+            ],
+            "id": 30
+        },
+        {
             "url": "https://nodedog.org/t/v2ray",
             "sel": [
                 ".post_def_title a",
