@@ -13,7 +13,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "better-sqlite3": "^8.7.0",
+        "better-sqlite3": "^9.6.0",
         "pkg": "^5.8.1",
         "promise-limit": "^2.7.0",
         "ps-node": "^0.1.6",

@@ -70,20 +70,6 @@
             "id": 15
         },
         {
-            "url": "https://github.com/v2rayw/v2rayw.github.io",
-            "sel": [
-                "article ul:nth-of-type(2) li"
-            ],
-            "id": 16
-        },
-        {
-            "url": "https://github.com/v2raynodes/v2raynodes.github.io",
-            "sel": [
-                "article ul:nth-of-type(2) li a"
-            ],
-            "id": 17
-        },
-        {
             "url": "https://it.weoknow.com/data/dayupdate/1/z1.txt",
             "id": 18
         },
@@ -176,7 +162,7 @@
             "url": "https://telegeam.github.io/clashv2rayshare/",
             "sel": [
                 ".repo-list-item+.repo-list-item a",
-                "article p:nth-of-type(50)"
+                "article p:nth-of-type(47)"
             ],
             "id": 30
         },
