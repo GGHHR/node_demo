@@ -99,7 +99,7 @@
             "url": "https://www.freev2raynode.com/free-node-subscription/",
             "sel": [
                 ".item-heading a",
-                " p:nth-of-type(21)"
+                ".post-content-content p:nth-of-type(14)"
             ],
             "id": 21
         },
@@ -263,14 +263,6 @@
                 ".post-body p:nth-of-type(9)"
             ],
             "id": 43
-        },
-        {
-            "url": "https://www.crazygeeky.com/category/151/",
-            "sel": [
-                ".info-title .a-link",
-                ".p-block p:nth-of-type(18) a"
-            ],
-            "id": 44
         },
         {
             "url": "https://raw.githubusercontent.com/freefq/free/master/v2",
