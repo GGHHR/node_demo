@@ -99,7 +99,7 @@
             "url": "https://www.freev2raynode.com/free-node-subscription/",
             "sel": [
                 ".item-heading a",
-                ".post-content-content p:nth-of-type(14)"
+                " p:nth-of-type(21)"
             ],
             "id": 21
         },
